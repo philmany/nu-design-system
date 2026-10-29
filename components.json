@@ -1,0 +1,141 @@
+{
+  "version": "1.0.0",
+  "description": "Semantic role to CSS mapping. Figma node IDs are recorded separately in figma-map.json.",
+  "components": [
+    {
+      "name": "Button/Primary",
+      "selector": ".nu-button--primary",
+      "origin": "source-derived"
+    },
+    {
+      "name": "Button/Secondary",
+      "selector": ".nu-button",
+      "origin": "source-derived"
+    },
+    {
+      "name": "Button/Accent",
+      "selector": ".nu-button--accent",
+      "origin": "source-derived"
+    },
+    {
+      "name": "Button/Danger",
+      "selector": ".nu-button--danger",
+      "origin": "extension"
+    },
+    {
+      "name": "Button/Quiet",
+      "selector": ".nu-button--quiet",
+      "origin": "extension"
+    },
+    {
+      "name": "Button/Icon",
+      "selector": ".nu-button--icon",
+      "origin": "extension"
+    },
+    {
+      "name": "Input",
+      "selector": ".nu-input",
+      "origin": "source-derived"
+    },
+    {
+      "name": "Select",
+      "selector": ".nu-select",
+      "origin": "source-derived"
+    },
+    {
+      "name": "Textarea",
+      "selector": ".nu-textarea",
+      "origin": "source-derived"
+    },
+    {
+      "name": "Checkbox",
+      "selector": ".nu-check",
+      "origin": "extension"
+    },
+    {
+      "name": "Radio",
+      "selector": ".nu-radio",
+      "origin": "extension"
+    },
+    {
+      "name": "Option",
+      "selector": ".nu-choice",
+      "origin": "extension"
+    },
+    {
+      "name": "Tabs",
+      "selector": ".nu-tabs",
+      "origin": "source-derived"
+    },
+    {
+      "name": "Badge",
+      "selector": ".nu-badge",
+      "origin": "source-derived"
+    },
+    {
+      "name": "Alert",
+      "selector": ".nu-alert",
+      "origin": "source-derived"
+    },
+    {
+      "name": "Card",
+      "selector": ".nu-card",
+      "origin": "source-derived"
+    },
+    {
+      "name": "Stat",
+      "selector": ".nu-stat",
+      "origin": "source-derived"
+    },
+    {
+      "name": "Progress",
+      "selector": ".nu-progress",
+      "origin": "source-derived"
+    },
+    {
+      "name": "Disclosure",
+      "selector": ".nu-disclosure",
+      "origin": "extension"
+    },
+    {
+      "name": "Dialog",
+      "selector": ".nu-dialog",
+      "origin": "source-derived"
+    },
+    {
+      "name": "EmptyState",
+      "selector": ".nu-empty",
+      "origin": "source-derived"
+    },
+    {
+      "name": "ProductCard",
+      "selector": ".nu-product",
+      "origin": "extension"
+    },
+    {
+      "name": "Price",
+      "selector": ".nu-price",
+      "origin": "extension"
+    },
+    {
+      "name": "Quantity",
+      "selector": ".nu-quantity",
+      "origin": "extension"
+    },
+    {
+      "name": "CartItem",
+      "selector": ".nu-cart-item",
+      "origin": "extension"
+    },
+    {
+      "name": "OrderSummary",
+      "selector": ".nu-summary",
+      "origin": "extension"
+    },
+    {
+      "name": "OrderSteps",
+      "selector": ".nu-order-steps",
+      "origin": "extension"
+    }
+  ]
+}

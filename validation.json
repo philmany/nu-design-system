@@ -1,0 +1,124 @@
+{
+  "version": "1.0.0",
+  "checkedOn": "2026-10-28",
+  "sourceCommit": "de8800a6f6bc1619c1c728dfacf3c458ab32c3cb",
+  "figma": {
+    "fileKey": "4fo7YNMa0iH4Yydo2YwGSe",
+    "pages": [
+      {
+        "name": "00 — Start here",
+        "pageId": "0:1",
+        "guideNodeId": "17:2",
+        "componentMasters": 0,
+        "variantSets": 0,
+        "visualReview": "passed"
+      },
+      {
+        "name": "01 — Foundations",
+        "pageId": "2:85",
+        "guideNodeId": "11:2",
+        "componentMasters": 1,
+        "variantSets": 0,
+        "visualReview": "passed"
+      },
+      {
+        "name": "02 — Icons",
+        "pageId": "2:86",
+        "guideNodeId": "3:2",
+        "componentMasters": 16,
+        "variantSets": 0,
+        "visualReview": "passed"
+      },
+      {
+        "name": "03 — Buttons",
+        "pageId": "2:87",
+        "guideNodeId": "4:2",
+        "componentMasters": 95,
+        "variantSets": 6,
+        "visualReview": "passed"
+      },
+      {
+        "name": "04 — Forms",
+        "pageId": "2:88",
+        "guideNodeId": "6:2",
+        "componentMasters": 36,
+        "variantSets": 6,
+        "visualReview": "passed"
+      },
+      {
+        "name": "05 — App patterns",
+        "pageId": "2:89",
+        "guideNodeId": "8:2",
+        "componentMasters": 27,
+        "variantSets": 6,
+        "visualReview": "passed"
+      },
+      {
+        "name": "06 — Commerce",
+        "pageId": "2:90",
+        "guideNodeId": "10:2",
+        "componentMasters": 27,
+        "variantSets": 8,
+        "visualReview": "passed"
+      },
+      {
+        "name": "07 — Flow recipes",
+        "pageId": "2:91",
+        "guideNodeId": "13:2",
+        "componentMasters": 0,
+        "variantSets": 0,
+        "visualReview": "passed"
+      },
+      {
+        "name": "08 — Handoff",
+        "pageId": "2:92",
+        "guideNodeId": "18:68",
+        "componentMasters": 0,
+        "variantSets": 0,
+        "visualReview": "passed"
+      }
+    ],
+    "componentMasters": 202,
+    "variantSets": 26,
+    "variables": 91,
+    "textStyles": 12,
+    "effectStyles": 5,
+    "brokenAliases": [],
+    "missingCodeSyntax": [],
+    "unscopedSemantic": [],
+    "unwantedAllScopes": [],
+    "strayTopLevelConstructionNodes": [],
+    "resizingChecked": [
+      "Text/select fields at280px",
+      "Card320px",
+      "Alert360px",
+      "Dialog360px with wrapping actions",
+      "Product card240px",
+      "Cart item320px",
+      "Order summary320px"
+    ]
+  },
+  "package": {
+    "tokens": 92,
+    "mappedComponentRoles": 48,
+    "browserWidths": [
+      1440,
+      390
+    ],
+    "localFontsLoaded": true,
+    "horizontalOverflow": false,
+    "javascriptErrors": false,
+    "interactionChecks": [
+      "Tabs: click and keyboard",
+      "Quantity min/max and typed bounds",
+      "Loading duplicate activation blocked",
+      "Dialog dismissal and focus restoration",
+      "Native toggle interaction"
+    ],
+    "tokenRegeneration": "deterministic",
+    "allCssVariableReferencesResolve": true,
+    "allFigmaVariableCssBindingsResolve": true,
+    "allMappedSelectorsAndAssetPathsExist": true
+  },
+  "scope": "Visual component library and implementation starter. Static Figma states and working catalog examples; production commerce integrations remain application work."
+}

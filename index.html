@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NU / Brutal Kit — Component library</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="catalog.css">
+  <script src="catalog.js" defer></script>
+</head>
+<body class="nu-root nu-dot-grid">
+  <!-- The symbol definitions below are generated from unmodified Lucide SVGs. -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" /></symbol><symbol id="icon-plus" viewBox="0 0 24 24"><path d="M5 12h14" />
+  <path d="M12 5v14" /></symbol><symbol id="icon-minus" viewBox="0 0 24 24"><path d="M5 12h14" /></symbol><symbol id="icon-x" viewBox="0 0 24 24"><path d="M18 6 6 18" />
+  <path d="m6 6 12 12" /></symbol><symbol id="icon-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34" />
+  <circle cx="11" cy="11" r="8" /></symbol><symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 5h16" />
+  <path d="M4 12h16" />
+  <path d="M4 19h16" /></symbol><symbol id="icon-shopping-bag" viewBox="0 0 24 24"><path d="M16 10a4 4 0 0 1-8 0" />
+  <path d="M3.103 6.034h17.794" />
+  <path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" /></symbol><symbol id="icon-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" /></symbol><symbol id="icon-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol><symbol id="icon-circle-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" />
+  <line x1="12" x2="12" y1="8" y2="12" />
+  <line x1="12" x2="12.01" y1="16" y2="16" /></symbol><symbol id="icon-heart" viewBox="0 0 24 24"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /></symbol><symbol id="icon-loader-circle" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-6.219-8.56" /></symbol><symbol id="icon-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7" />
+  <path d="M19 12H5" /></symbol><symbol id="icon-package" viewBox="0 0 24 24"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" />
+  <path d="M12 22V12" />
+  <polyline points="3.29 7 12 12 20.71 7" />
+  <path d="m7.5 4.27 9 5.15" /></symbol><symbol id="icon-settings" viewBox="0 0 24 24"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915" />
+  <circle cx="12" cy="12" r="3" /></symbol><symbol id="icon-trash" viewBox="0 0 24 24"><path d="M10 11v6" />
+  <path d="M14 11v6" />
+  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+  <path d="M3 6h18" />
+  <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /></symbol></svg>
+  <a class="nu-sr-only nu-link" href="#main">Skip to components</a>
+  <div class="catalog-shell">
+    <nav class="catalog-nav" aria-label="Library chapters">
+      <p class="catalog-mark">nu.</p>
+      <a href="#start">00 / Start here</a>
+      <a href="#foundations">01 / Foundations</a>
+      <a href="#actions">02 / Actions</a>
+      <a href="#forms">03 / Forms</a>
+      <a href="#patterns">04 / Patterns</a>
+      <a href="#commerce">05 / Commerce</a>
+      <a href="#flows">06 / Flows</a>
+      <a href="#icons">07 / Icons</a>
+      <span class="catalog-stamp">Build your<br>own thing.</span>
+    </nav>
+    <main id="main" class="catalog-main">
+      <section id="start" class="catalog-section" aria-labelledby="hero-title">
+        <div class="catalog-hero">
+          <div>
+            <span class="catalog-stamp">NU / Brutal Kit · v1.0</span>
+            <h1 id="hero-title" class="nu-display">Soft paper.<br>Hard edges.</h1>
+            <p>A tiny design system for shops, tools, and whatever’s next. Warm color. Loud type. Buttons that look like buttons.</p>
+            <div class="nu-row">
+              <a class="nu-button nu-button--primary" href="#actions">Meet the components <svg class="nu-icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg></a>
+              <a class="nu-button" href="https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe">Open Figma</a>
+            </div>
+          </div>
+          <div class="catalog-hero__side">Source: nuNutrition · Made for the next idea · No framework required</div>
+        </div>
+        <div class="catalog-three catalog-spacer">
+          <article class="nu-card catalog-card"><h3>01. Keep the DNA.</h3><p>Square corners, warm paper, 3px ink, hard shadows. The personality is in the structure.</p></article>
+          <article class="nu-card catalog-card"><h3>02. Make it yours.</h3><p>Swap the accent, content, and product images. Keep the component roles stable.</p></article>
+          <article class="nu-card catalog-card"><h3>03. Ship the boring bits.</h3><p>Labels, focus, loading, stock, errors. Clear beats clever when money moves.</p></article>
+        </div>
+        <p class="catalog-note">This is a component playground, not a finished store. Product names, prices, and order details are examples.</p>
+      </section>
+
+      <section id="foundations" class="catalog-section" aria-labelledby="foundations-title">
+        <div class="catalog-heading"><span>01 / THE DNA</span><h2 id="foundations-title">Foundations</h2></div>
+        <p class="catalog-lede">The original palette stays. Semantic tokens make it portable. Use ink on warm colors; reserve muted text for paper or cream.</p>
+        <div class="catalog-swatch-grid">
+          <div class="catalog-swatch"><div style="background:var(--black)"></div><p>Ink<br>#1A1510</p></div>
+          <div class="catalog-swatch"><div style="background:var(--white)"></div><p>Paper<br>#FDF6EC</p></div>
+          <div class="catalog-swatch"><div style="background:var(--yellow)"></div><p>Yellow<br>#E8C84A</p></div>
+          <div class="catalog-swatch"><div style="background:var(--honey)"></div><p>Honey<br>#D4A85C</p></div>
+          <div class="catalog-swatch"><div style="background:var(--cream)"></div><p>Cream<br>#F5EAD8</p></div>
+          <div class="catalog-swatch"><div style="background:var(--amber)"></div><p>Amber<br>#C97C2A</p></div>
+          <div class="catalog-swatch"><div style="background:var(--pink)"></div><p>Clay<br>#D4956A</p></div>
+          <div class="catalog-swatch"><div style="background:var(--red)"></div><p>Red<br>#C0441C</p></div>
+          <div class="catalog-swatch"><div style="background:var(--green)"></div><p>Green / source<br>#5A8A3C</p></div>
+          <div class="catalog-swatch"><div style="background:var(--success-dark)"></div><p>Success / added<br>#365423</p></div>
+        </div>
+        <div class="catalog-two catalog-spacer">
+          <div class="catalog-specimen">
+            <p class="nu-kicker">Space Grotesk · 400 / 500 / 700</p>
+            <p class="nu-display" style="font-size:48px;margin:20px 0">A little<br>off-center.</p>
+            <p>Body copy gets room to breathe. Save uppercase for short headings, buttons, and labels.</p>
+            <p class="nu-mono">DM Mono · 400 / 500<br>ORDER #0042 · $48.00 CAD</p>
+          </div>
+          <div class="catalog-specimen">
+            <h3>The rules, briefly.</h3>
+            <div class="catalog-table-wrap"><table class="catalog-table"><tbody>
+              <tr><th scope="row">Corners</th><td>0px. Radio controls stay circular.</td></tr>
+              <tr><th scope="row">Outlines</th><td>3px main / 2px detail</td></tr>
+              <tr><th scope="row">Shadows</th><td>3 / 5 / 7px · no blur</td></tr>
+              <tr><th scope="row">Space</th><td>4 / 8 / 12 / 16 / 24 / 32px</td></tr>
+              <tr><th scope="row">Controls</th><td>44px default / 52px large</td></tr>
+              <tr><th scope="row">Type</th><td>16px form inputs; 14–16px body</td></tr>
+            </tbody></table></div>
+            <p class="catalog-note">The source requests 900-weight fonts. This kit uses actual available weights: Space Grotesk 700 and DM Mono 500.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="actions" class="catalog-section" aria-labelledby="actions-title">
+        <div class="catalog-heading"><span>02 / MAKE IT HAPPEN</span><h2 id="actions-title">Actions</h2></div>
+        <p class="catalog-lede">One main action per group. Say what happens next. “Add to bag” beats “Let’s go.”</p>
+        <div class="catalog-table-wrap"><table class="catalog-table">
+          <thead><tr><th>Button</th><th>Use it for</th><th>Code</th></tr></thead>
+          <tbody>
+            <tr><td><button class="nu-button nu-button--primary" type="button" data-demo-action="Added to the demo bag.">Add to bag</button></td><td>The next meaningful step: save, submit, buy.</td><td><code>.nu-button--primary</code></td></tr>
+            <tr><td><button class="nu-button" type="button" data-demo-action="Demo: this action would continue browsing.">Keep browsing</button></td><td>A supporting route beside the main action.</td><td><code>.nu-button</code></td></tr>
+            <tr><td><button class="nu-button nu-button--accent" type="button" data-demo-action="Demo: this action would open your new drop.">New drop</button></td><td>A promotional action; keep it distinct from checkout.</td><td><code>.nu-button--accent</code></td></tr>
+            <tr><td><button class="nu-button nu-button--danger" type="button" data-open-dialog>Remove item</button></td><td>A destructive change. Name the thing being removed.</td><td><code>.nu-button--danger</code></td></tr>
+            <tr><td><button class="nu-button nu-button--quiet" type="button" data-demo-action="Demo: this action would open item editing.">Edit item</button></td><td>A low-emphasis inline action.</td><td><code>.nu-button--quiet</code></td></tr>
+            <tr><td><button class="nu-button nu-button--icon" type="button" aria-label="Search products" data-demo-action="Demo: this action would open search."><svg class="nu-icon" aria-hidden="true"><use href="#icon-search"/></svg></button></td><td>A familiar action with a visible tooltip or accessible name.</td><td><code>.nu-button--icon</code></td></tr>
+          </tbody>
+        </table></div>
+        <div class="catalog-actions">
+          <div><span class="catalog-label">DEFAULT · 44px</span><button class="nu-button" type="button" data-demo-action="Default button activated.">Save changes</button></div>
+          <div><span class="catalog-label">LARGE · 52px</span><button class="nu-button nu-button--large nu-button--primary" type="button" data-demo-action="Demo only. No checkout was started.">Checkout</button></div>
+          <div><span class="catalog-label">COMPACT · 32px</span><button class="nu-button nu-button--compact" type="button" data-demo-action="Compact button activated.">Edit</button></div>
+          <div><span class="catalog-label">DISABLED</span><button class="nu-button" type="button" disabled>Sold out</button></div>
+          <div><span class="catalog-label">LOADING DEMO</span><button class="nu-button nu-button--primary" type="button" data-demo-loading><svg class="nu-icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg><span>Try loading</span></button></div>
+        </div>
+        <div id="demo-status" class="nu-alert" role="status" aria-live="polite"><svg class="nu-icon" aria-hidden="true"><use href="#icon-check"/></svg><p>Try a button. Demo actions appear here.</p></div>
+        <p class="catalog-note">Tab to see the focus ring. Hover lifts by 1px; press sinks by 2px. Compact controls are for dense desktop UI; keep a 44px hit area for touch.</p>
+      </section>
+
+      <section id="forms" class="catalog-section" aria-labelledby="forms-title">
+        <div class="catalog-heading"><span>03 / GET THE DETAILS</span><h2 id="forms-title">Forms</h2></div>
+        <p class="catalog-lede">Visible labels. Useful hints. Errors that say how to fix the problem.</p>
+        <div class="catalog-two">
+          <div class="nu-card nu-stack">
+            <div class="nu-field"><label class="nu-label" for="email-example">Email</label><input class="nu-input" id="email-example" type="email" autocomplete="email" placeholder="you@example.com" aria-describedby="email-help"><p class="nu-help" id="email-help">For your receipt and shipping updates.</p></div>
+            <div class="nu-field"><label class="nu-label" for="country-example">Country or region</label><select class="nu-select" id="country-example" autocomplete="country-name"><option>Canada</option><option>United States</option><option>United Kingdom</option></select></div>
+            <div class="nu-field"><label class="nu-label" for="gift-example">Gift note <span class="nu-muted">(optional)</span></label><textarea class="nu-textarea" id="gift-example" placeholder="A little note goes a long way." maxlength="240" aria-describedby="gift-help"></textarea><p class="nu-help" id="gift-help">Up to 240 characters.</p></div>
+          </div>
+          <div class="nu-card nu-stack">
+            <div class="nu-field"><label class="nu-label" for="postal-example">Postal code</label><input class="nu-input" id="postal-example" type="text" value="K1" autocomplete="postal-code" aria-invalid="true" aria-describedby="postal-error"><p class="nu-error" id="postal-error">Enter a full postal code, like K1A 0B1.</p></div>
+            <div class="nu-field"><label class="nu-label" for="disabled-example">Tracking number</label><input class="nu-input" id="disabled-example" value="Available after shipping" disabled></div>
+            <label class="nu-control-label"><input class="nu-check" type="checkbox" checked> Email me about new drops.</label>
+            <fieldset class="nu-fieldset"><legend class="nu-label">Shipping speed</legend><div class="nu-stack" style="gap:0"><label class="nu-control-label"><input class="nu-radio" type="radio" name="shipping-demo" checked> Standard · 3–5 business days</label><label class="nu-control-label"><input class="nu-radio" type="radio" name="shipping-demo"> Express · 1–2 business days</label></div></fieldset>
+          </div>
+        </div>
+        <p class="catalog-note">The yellow focus fill comes from the original CSS. The visible focus outline, disabled treatment, and explicit error state are additions.</p>
+      </section>
+
+      <section id="patterns" class="catalog-section" aria-labelledby="patterns-title">
+        <div class="catalog-heading"><span>04 / THE EVERYDAY STUFF</span><h2 id="patterns-title">Patterns</h2></div>
+        <div class="catalog-two">
+          <div class="nu-stack">
+            <div class="nu-tabs" role="tablist" aria-label="Example product information">
+              <button class="nu-tab" type="button" role="tab" aria-selected="true" aria-controls="details-panel" id="details-tab" tabindex="0">Details</button>
+              <button class="nu-tab" type="button" role="tab" aria-selected="false" aria-controls="shipping-panel" id="shipping-tab" tabindex="-1">Shipping</button>
+            </div>
+            <div class="nu-card" id="details-panel" role="tabpanel" aria-labelledby="details-tab" tabindex="0">Designed for your everyday rotation. Add actual materials, sizing, and care instructions here.</div>
+            <div class="nu-card" id="shipping-panel" role="tabpanel" aria-labelledby="shipping-tab" tabindex="0" hidden>Show the real shipping regions, costs, dispatch time, and returns policy before checkout.</div>
+            <div class="nu-row"><span class="nu-badge nu-badge--new">New drop</span><span class="nu-badge">Low stock</span><span class="nu-badge nu-badge--sold">Sold out</span><span class="nu-badge nu-badge--quiet">Draft</span></div>
+            <div class="nu-alert nu-alert--success"><svg class="nu-icon" aria-hidden="true"><use href="#icon-check"/></svg><p>All set. Your changes are saved.</p></div>
+            <div class="nu-alert nu-alert--warning"><svg class="nu-icon" aria-hidden="true"><use href="#icon-circle-alert"/></svg><p>One item has limited stock. Check your quantity.</p></div>
+            <div class="nu-alert nu-alert--error"><svg class="nu-icon" aria-hidden="true"><use href="#icon-circle-alert"/></svg><p>Payment didn’t go through. Try another payment method.</p></div>
+          </div>
+          <div class="nu-stack">
+            <div class="nu-card nu-card--accent nu-stat"><span class="nu-stat__value">$1,240</span><span class="nu-stat__label">Example monthly sales · CAD</span></div>
+            <div class="nu-card nu-stack"><div class="nu-row" style="justify-content:space-between"><label for="stock-progress" class="nu-label">Drop sold</label><span class="nu-mono">24 / 40</span></div><progress id="stock-progress" class="nu-progress" max="40" value="24">24 of 40 sold</progress></div>
+            <div class="nu-card">
+              <details class="nu-disclosure"><summary>Shipping & returns <svg class="nu-icon" aria-hidden="true"><use href="#icon-chevron-down"/></svg></summary><div class="nu-disclosure__body">Put your actual delivery estimates and returns terms here. Keep this available before purchase.</div></details>
+              <details class="nu-disclosure"><summary>Care instructions <svg class="nu-icon" aria-hidden="true"><use href="#icon-chevron-down"/></svg></summary><div class="nu-disclosure__body">Use product-specific care guidance. Short steps beat a wall of text.</div></details>
+            </div>
+            <button class="nu-button" type="button" data-open-dialog>Open confirmation dialog</button>
+          </div>
+        </div>
+        <div id="additional-patterns" class="catalog-two catalog-spacer">
+          <div class="nu-card nu-stack">
+            <h3 class="nu-title" style="margin:0">On. Off. Easy.</h3>
+            <label class="nu-control-label"><input class="nu-toggle" type="checkbox" role="switch" checked> Show order updates</label>
+            <label class="nu-control-label"><input class="nu-toggle" type="checkbox" role="switch"> Quiet mode</label>
+            <label class="nu-control-label"><input class="nu-toggle" type="checkbox" role="switch" disabled> Sync unavailable</label>
+            <p class="nu-help">Use a switch for a setting that applies immediately.</p>
+          </div>
+          <div class="nu-card nu-stack">
+            <h3 class="nu-title" style="margin:0">A little back-and-forth.</h3>
+            <div class="nu-message nu-message--user"><span class="nu-sr-only">You: </span>Where can I find my receipt?</div>
+            <div class="nu-message nu-message--assistant"><span class="nu-sr-only">Assistant: </span>Open the order details to view your receipt.</div>
+            <div class="nu-message nu-message--error"><span class="nu-sr-only">Error: </span>Couldn’t load that reply. Try again.</div>
+            <p class="nu-help">Sample conversation and error state.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="commerce" class="catalog-section" aria-labelledby="commerce-title">
+        <div class="catalog-heading"><span>05 / SELL YOUR THING</span><h2 id="commerce-title">Commerce</h2></div>
+        <p class="catalog-lede">Product cards, options, quantities, and totals. Mix these into your own storefront. Keep price, stock, and payment states literal.</p>
+        <div class="catalog-three">
+          <article class="nu-product">
+            <div class="nu-product__media"><div class="catalog-art" role="img" aria-label="Example artwork slot: Offline Studio poster"><div class="catalog-art__poster">Offline<br>Studio<small>Sample artwork slot</small></div></div><span class="nu-badge nu-badge--new nu-product__flag">New drop</span></div>
+            <div class="nu-product__body"><h3 class="nu-product__title">Offline print</h3><div class="nu-price">$24.00 <span class="nu-price__currency">CAD</span></div><button class="nu-button nu-button--primary nu-button--block" type="button" data-demo-action="Offline print added to the demo bag.">Add to bag</button></div>
+          </article>
+          <article class="nu-product">
+            <div class="nu-product__media"><div class="catalog-art catalog-art--honey" role="img" aria-label="Example artwork slot: No Plans print"><div class="catalog-art__poster" style="transform:rotate(5deg)">No<br>Plans.<small>Sample artwork slot</small></div></div><span class="nu-badge nu-badge--sold nu-product__flag">Sold out</span></div>
+            <div class="nu-product__body"><h3 class="nu-product__title">No Plans print</h3><div class="nu-price"><span class="nu-sr-only">Current price</span><ins>$18.00</ins><span class="nu-sr-only">Original price</span><del>$24.00</del><span class="nu-price__currency">CAD</span></div><button class="nu-button nu-button--block" type="button" disabled>Sold out</button></div>
+          </article>
+          <div class="nu-card nu-stack">
+            <h3 class="nu-title" style="margin:0">Your pick.</h3>
+            <fieldset class="nu-fieldset"><legend class="nu-label">Size</legend><div class="nu-options"><label class="nu-choice"><input class="nu-sr-only" type="radio" name="size-demo" value="S">S</label><label class="nu-choice"><input class="nu-sr-only" type="radio" name="size-demo" value="M" checked>M</label><label class="nu-choice"><input class="nu-sr-only" type="radio" name="size-demo" value="L">L</label><label class="nu-choice"><input class="nu-sr-only" type="radio" name="size-demo" value="XL" disabled>XL<span class="nu-sr-only"> — sold out</span></label></div></fieldset>
+            <p class="nu-help">Unavailable options stay visible.</p>
+            <div class="nu-field"><label class="nu-label" for="quantity-demo">Quantity</label><div class="nu-quantity" data-quantity><button class="nu-button" type="button" data-decrease aria-label="Decrease example product quantity" disabled><svg class="nu-icon" aria-hidden="true"><use href="#icon-minus"/></svg></button><input id="quantity-demo" type="number" min="1" max="5" value="1" inputmode="numeric"><button class="nu-button" type="button" data-increase aria-label="Increase example product quantity"><svg class="nu-icon" aria-hidden="true"><use href="#icon-plus"/></svg></button></div><p class="nu-help">Example stock limit: 5.</p></div>
+            <button class="nu-button nu-button--primary" type="button" data-demo-action="Selected options added to the demo bag.">Add to bag <svg class="nu-icon" aria-hidden="true"><use href="#icon-plus"/></svg></button>
+            <p class="catalog-note">Use “Choose options” on cards when size or color is required.</p>
+          </div>
+        </div>
+        <div class="catalog-two catalog-spacer">
+          <div class="nu-card">
+            <h3 class="nu-title" style="margin-top:0">The bag.</h3>
+            <article class="nu-cart-item" id="demo-cart-item">
+              <div class="nu-cart-item__media catalog-small-media" aria-hidden="true">OFF<br>LINE</div>
+              <div><h4 class="nu-cart-item__title">Offline print</h4><p class="nu-cart-item__meta">A3 / Cream · Quantity 1</p><button class="nu-button nu-button--quiet" type="button" data-open-dialog>Remove item</button></div>
+              <div class="nu-cart-item__actions nu-mono">$24.00</div>
+            </article>
+            <p class="nu-help catalog-spacer">Example item. A production bag recalculates totals after quantity or stock changes.</p>
+          </div>
+          <div class="nu-card nu-summary">
+            <h3 class="nu-title" style="margin:0">Order summary</h3>
+            <dl><dt>Subtotal</dt><dd>$24.00</dd><dt>Shipping</dt><dd>$6.00</dd><dt>Tax <span class="nu-muted">(example)</span></dt><dd>$3.90</dd><dt class="nu-summary__total">Total · CAD</dt><dd class="nu-summary__total">$33.90</dd></dl>
+            <button class="nu-button nu-button--primary nu-button--block" type="button" data-demo-action="Demo only. Connect Checkout to your payment provider in your app.">Checkout <svg class="nu-icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg></button>
+            <p class="nu-help">Sample arithmetic only. Calculate real tax and shipping server-side.</p>
+          </div>
+        </div>
+        <div class="nu-empty catalog-spacer"><h3>Your bag has room.</h3><p>Find something you’ll want to keep.</p><a class="nu-button" href="#commerce">Keep browsing</a></div>
+      </section>
+
+      <section id="flows" class="catalog-section" aria-labelledby="flows-title">
+        <div class="catalog-heading"><span>06 / CONNECT THE DOTS</span><h2 id="flows-title">Flow recipes</h2></div>
+        <p class="catalog-lede">Build your own screens around these decisions. The recovery paths deserve the same care as the happy path.</p>
+        <div class="catalog-flow">
+          <div><span class="nu-kicker">01</span><h3>Browse</h3><p>Grid + filters + product cards.<br>Handle zero results.</p></div>
+          <div><span class="nu-kicker">02</span><h3>Pick</h3><p>Price + options + quantity.<br>Validate required choices.</p></div>
+          <div><span class="nu-kicker">03</span><h3>Bag</h3><p>Items + totals + checkout.<br>Recheck stock and cost.</p></div>
+          <div><span class="nu-kicker">04</span><h3>Pay</h3><p>Contact + shipping + payment.<br>Keep details after errors.</p></div>
+          <div><span class="nu-kicker">05</span><h3>All yours</h3><p>Receipt + order status.<br>Show confirmation only after success.</p></div>
+        </div>
+        <div class="nu-card catalog-spacer nu-stack">
+          <p class="nu-kicker" style="margin:0">ORDER STATUS · EXAMPLE</p>
+          <ol class="nu-order-steps" aria-label="Order progress"><li data-complete="true"><svg class="nu-icon" aria-hidden="true"><use href="#icon-check"/></svg>Confirmed</li><li aria-current="step">Packing</li><li>Shipped</li><li>Delivered</li></ol>
+          <p class="nu-help">Use the actual order state. A successful button click does not mean a successful payment.</p>
+        </div>
+        <p class="catalog-note">Read <a class="nu-link" href="docs/flows.md">docs/flows.md</a> for branch conditions and component recipes. Payment, inventory, authentication, and tax are application responsibilities.</p>
+      </section>
+
+      <section id="icons" class="catalog-section" aria-labelledby="icons-title">
+        <div class="catalog-heading"><span>07 / SMALL BUT USEFUL</span><h2 id="icons-title">Icons</h2></div>
+        <p class="catalog-lede">16 editable Lucide SVGs. Keep the 24px grid and 2px stroke. Use 20px inside 44px controls.</p>
+        <div class="catalog-icon-grid"><div><svg class="nu-icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg><span>arrow-right</span></div><div><svg class="nu-icon" aria-hidden="true"><use href="#icon-plus"/></svg><span>plus</span></div><div><svg class="nu-icon" aria-hidden="true"><use href="#icon-minus"/></svg><span>minus</span></div><div><svg class="nu-icon" aria-hidden="true"><use href="#icon-x"/></svg><span>x</span></div><div><svg class="nu-icon" aria-hidden="true"><use href="#icon-search"/></svg><span>search</span></div><div><svg class="nu-icon" aria-hidden="true"><use href="#icon-menu"/></svg><span>menu</span></div><div><svg class="nu-icon" aria-hidden="true"><use href="#icon-shopping-bag"/></svg><span>shopping-bag</span></div><div><svg class="nu-icon" aria-hidden="true"><use href="#icon-chevron-down"/></svg><span>chevron-down</span></div><div><svg class="nu-icon" aria-hidden="true"><use href="#icon-check"/></svg><span>check</span></div><div><svg class="nu-icon" aria-hidden="true"><use href="#icon-circle-alert"/></svg><span>circle-alert</span></div><div><svg class="nu-icon" aria-hidden="true"><use href="#icon-heart"/></svg><span>heart</span></div><div><svg class="nu-icon" aria-hidden="true"><use href="#icon-loader-circle"/></svg><span>loader-circle</span></div><div><svg class="nu-icon" aria-hidden="true"><use href="#icon-arrow-left"/></svg><span>arrow-left</span></div><div><svg class="nu-icon" aria-hidden="true"><use href="#icon-package"/></svg><span>package</span></div><div><svg class="nu-icon" aria-hidden="true"><use href="#icon-settings"/></svg><span>settings</span></div><div><svg class="nu-icon" aria-hidden="true"><use href="#icon-trash"/></svg><span>trash</span></div></div>
+        <p class="catalog-note">Lucide / ISC; Feather-derived assets retain the upstream MIT notice. Exact source URLs and revision are in assets/icons/manifest.json. Fonts are bundled under SIL OFL 1.1.</p>
+      </section>
+      <footer class="catalog-footer">NU / Brutal Kit · Based on <a class="nu-link" href="https://github.com/philmany/nunutrition">philmany/nunutrition</a> · <a class="nu-link" href="README.md">Usage guide</a> · <a class="nu-link" href="docs/components.md">Component notes</a> · <a class="nu-link" href="LICENSES.md">Credits & licenses</a></footer>
+    </main>
+  </div>
+  <dialog class="nu-dialog" id="remove-dialog" aria-labelledby="remove-title" aria-describedby="remove-description">
+    <form method="dialog"><h2 id="remove-title" class="nu-dialog__title">Remove this item?</h2><p id="remove-description">This is a demo. In your app, keep the bag easy to edit and offer undo where practical.</p><div class="nu-row" style="justify-content:flex-end"><button class="nu-button" value="cancel" autofocus>Keep item</button><button class="nu-button nu-button--danger" value="remove">Remove item</button></div></form>
+  </dialog>
+</body>
+</html>

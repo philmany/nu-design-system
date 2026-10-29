@@ -1,0 +1,3261 @@
+{
+  "fileKey": "4fo7YNMa0iH4Yydo2YwGSe",
+  "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe",
+  "version": "1.0.0",
+  "sync": "manual-snapshot",
+  "publication": "Local editable components; publish the file in Figma to enable it as a cross-file library.",
+  "notes": "Shared visual contract with per-platform representation. Selectors identify code roles and composed recipes, not a one-to-one binding of every Figma state. This is not native published Code Connect.",
+  "source": {
+    "url": "https://github.com/philmany/nunutrition",
+    "commit": "de8800a6f6bc1619c1c728dfacf3c458ab32c3cb",
+    "file": "index.html"
+  },
+  "counts": {
+    "pages": 9,
+    "componentSets": 26,
+    "componentMasters": 202,
+    "standaloneComponents": 22,
+    "icons": 16,
+    "figmaVariables": 91,
+    "packageTokens": 92,
+    "textStyles": 12,
+    "effectStyles": 5
+  },
+  "pages": {
+    "00 — Start here": {
+      "pageId": "0:1",
+      "guideNodeId": "17:2",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=17-2"
+    },
+    "01 — Foundations": {
+      "pageId": "2:85",
+      "guideNodeId": "11:2",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=11-2"
+    },
+    "02 — Icons": {
+      "pageId": "2:86",
+      "guideNodeId": "3:2",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=3-2"
+    },
+    "03 — Buttons": {
+      "pageId": "2:87",
+      "guideNodeId": "4:2",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=4-2"
+    },
+    "04 — Forms": {
+      "pageId": "2:88",
+      "guideNodeId": "6:2",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=6-2"
+    },
+    "05 — App patterns": {
+      "pageId": "2:89",
+      "guideNodeId": "8:2",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=8-2"
+    },
+    "06 — Commerce": {
+      "pageId": "2:90",
+      "guideNodeId": "10:2",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=10-2"
+    },
+    "07 — Flow recipes": {
+      "pageId": "2:91",
+      "guideNodeId": "13:2",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=13-2"
+    },
+    "08 — Handoff": {
+      "pageId": "2:92",
+      "guideNodeId": "18:68",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=18-68"
+    }
+  },
+  "components": {
+    "Texture / Dot grid": {
+      "nodeId": "11:117",
+      "type": "COMPONENT",
+      "page": "01 — Foundations",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=11-117",
+      "css": ".nu-dot-grid",
+      "source": "styles.css",
+      "description": "Original body texture: 22 px grid, 1.8 px diameter dots in #b8a898. Keep away from dense text and inputs."
+    },
+    "Icon / arrow-left": {
+      "nodeId": "3:7",
+      "type": "COMPONENT",
+      "page": "02 — Icons",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=3-7",
+      "css": ".nu-icon",
+      "source": "assets/icons/arrow-left.svg",
+      "description": "Lucide arrow-left. 24 px source SVG, 2 px stroke. Add an accessible name to icon-only controls. ISC license; see Handoff."
+    },
+    "Icon / arrow-right": {
+      "nodeId": "3:17",
+      "type": "COMPONENT",
+      "page": "02 — Icons",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=3-17",
+      "css": ".nu-icon",
+      "source": "assets/icons/arrow-right.svg",
+      "description": "Lucide arrow-right. 24 px source SVG, 2 px stroke. Add an accessible name to icon-only controls. ISC license; see Handoff."
+    },
+    "Icon / check": {
+      "nodeId": "3:26",
+      "type": "COMPONENT",
+      "page": "02 — Icons",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=3-26",
+      "css": ".nu-icon",
+      "source": "assets/icons/check.svg",
+      "description": "Lucide check. 24 px source SVG, 2 px stroke. Add an accessible name to icon-only controls. ISC license; see Handoff."
+    },
+    "Icon / chevron-down": {
+      "nodeId": "3:33",
+      "type": "COMPONENT",
+      "page": "02 — Icons",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=3-33",
+      "css": ".nu-icon",
+      "source": "assets/icons/chevron-down.svg",
+      "description": "Lucide chevron-down. 24 px source SVG, 2 px stroke. Add an accessible name to icon-only controls. ISC license; see Handoff."
+    },
+    "Icon / circle-alert": {
+      "nodeId": "3:40",
+      "type": "COMPONENT",
+      "page": "02 — Icons",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=3-40",
+      "css": ".nu-icon",
+      "source": "assets/icons/circle-alert.svg",
+      "description": "Lucide circle-alert. 24 px source SVG, 2 px stroke. Add an accessible name to icon-only controls. ISC license; see Handoff."
+    },
+    "Icon / heart": {
+      "nodeId": "3:52",
+      "type": "COMPONENT",
+      "page": "02 — Icons",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=3-52",
+      "css": ".nu-icon",
+      "source": "assets/icons/heart.svg",
+      "description": "Lucide heart. 24 px source SVG, 2 px stroke. Add an accessible name to icon-only controls. ISC license; see Handoff."
+    },
+    "Icon / loader-circle": {
+      "nodeId": "3:59",
+      "type": "COMPONENT",
+      "page": "02 — Icons",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=3-59",
+      "css": ".nu-icon",
+      "source": "assets/icons/loader-circle.svg",
+      "description": "Lucide loader-circle. 24 px source SVG, 2 px stroke. Add an accessible name to icon-only controls. ISC license; see Handoff."
+    },
+    "Icon / menu": {
+      "nodeId": "3:66",
+      "type": "COMPONENT",
+      "page": "02 — Icons",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=3-66",
+      "css": ".nu-icon",
+      "source": "assets/icons/menu.svg",
+      "description": "Lucide menu. 24 px source SVG, 2 px stroke. Add an accessible name to icon-only controls. ISC license; see Handoff."
+    },
+    "Icon / minus": {
+      "nodeId": "3:77",
+      "type": "COMPONENT",
+      "page": "02 — Icons",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=3-77",
+      "css": ".nu-icon",
+      "source": "assets/icons/minus.svg",
+      "description": "Lucide minus. 24 px source SVG, 2 px stroke. Add an accessible name to icon-only controls. ISC license; see Handoff."
+    },
+    "Icon / package": {
+      "nodeId": "3:85",
+      "type": "COMPONENT",
+      "page": "02 — Icons",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=3-85",
+      "css": ".nu-icon",
+      "source": "assets/icons/package.svg",
+      "description": "Lucide package. 24 px source SVG, 2 px stroke. Add an accessible name to icon-only controls. ISC license; see Handoff."
+    },
+    "Icon / plus": {
+      "nodeId": "3:98",
+      "type": "COMPONENT",
+      "page": "02 — Icons",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=3-98",
+      "css": ".nu-icon",
+      "source": "assets/icons/plus.svg",
+      "description": "Lucide plus. 24 px source SVG, 2 px stroke. Add an accessible name to icon-only controls. ISC license; see Handoff."
+    },
+    "Icon / search": {
+      "nodeId": "3:107",
+      "type": "COMPONENT",
+      "page": "02 — Icons",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=3-107",
+      "css": ".nu-icon",
+      "source": "assets/icons/search.svg",
+      "description": "Lucide search. 24 px source SVG, 2 px stroke. Add an accessible name to icon-only controls. ISC license; see Handoff."
+    },
+    "Icon / settings": {
+      "nodeId": "3:116",
+      "type": "COMPONENT",
+      "page": "02 — Icons",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=3-116",
+      "css": ".nu-icon",
+      "source": "assets/icons/settings.svg",
+      "description": "Lucide settings. 24 px source SVG, 2 px stroke. Add an accessible name to icon-only controls. ISC license; see Handoff."
+    },
+    "Icon / shopping-bag": {
+      "nodeId": "3:126",
+      "type": "COMPONENT",
+      "page": "02 — Icons",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=3-126",
+      "css": ".nu-icon",
+      "source": "assets/icons/shopping-bag.svg",
+      "description": "Lucide shopping-bag. 24 px source SVG, 2 px stroke. Add an accessible name to icon-only controls. ISC license; see Handoff."
+    },
+    "Icon / trash": {
+      "nodeId": "3:137",
+      "type": "COMPONENT",
+      "page": "02 — Icons",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=3-137",
+      "css": ".nu-icon",
+      "source": "assets/icons/trash.svg",
+      "description": "Lucide trash. 24 px source SVG, 2 px stroke. Add an accessible name to icon-only controls. ISC license; see Handoff."
+    },
+    "Icon / x": {
+      "nodeId": "3:152",
+      "type": "COMPONENT",
+      "page": "02 — Icons",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=3-152",
+      "css": ".nu-icon",
+      "source": "assets/icons/x.svg",
+      "description": "Lucide x. 24 px source SVG, 2 px stroke. Add an accessible name to icon-only controls. ISC license; see Handoff."
+    },
+    "Button / Primary": {
+      "nodeId": "4:151",
+      "type": "COMPONENT_SET",
+      "page": "03 — Buttons",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=4-151",
+      "css": ".nu-button.nu-button--primary",
+      "variants": 18,
+      "properties": {
+        "Label#4:0": {
+          "type": "TEXT",
+          "defaultValue": "ADD TO BAG"
+        },
+        "Loading label#4:19": {
+          "type": "TEXT",
+          "defaultValue": "ADDING..."
+        },
+        "Icon#4:38": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "3:17",
+          "preferredValues": []
+        },
+        "Show icon#4:57": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Size": {
+          "type": "VARIANT",
+          "defaultValue": "Compact",
+          "variantOptions": [
+            "Compact",
+            "Default",
+            "Large"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "variantOptions": [
+            "Default",
+            "Hover",
+            "Pressed",
+            "Focus",
+            "Disabled",
+            "Loading"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Button / Secondary": {
+      "nodeId": "4:345",
+      "type": "COMPONENT_SET",
+      "page": "03 — Buttons",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=4-345",
+      "css": ".nu-button",
+      "variants": 18,
+      "properties": {
+        "Label#4:76": {
+          "type": "TEXT",
+          "defaultValue": "KEEP BROWSING"
+        },
+        "Loading label#4:95": {
+          "type": "TEXT",
+          "defaultValue": "LOADING..."
+        },
+        "Icon#4:114": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "3:17",
+          "preferredValues": []
+        },
+        "Show icon#4:133": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Size": {
+          "type": "VARIANT",
+          "defaultValue": "Compact",
+          "variantOptions": [
+            "Compact",
+            "Default",
+            "Large"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "variantOptions": [
+            "Default",
+            "Hover",
+            "Pressed",
+            "Focus",
+            "Disabled",
+            "Loading"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Button / Accent": {
+      "nodeId": "4:539",
+      "type": "COMPONENT_SET",
+      "page": "03 — Buttons",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=4-539",
+      "css": ".nu-button.nu-button--accent",
+      "variants": 18,
+      "properties": {
+        "Label#4:152": {
+          "type": "TEXT",
+          "defaultValue": "VIEW THE DROP"
+        },
+        "Loading label#4:171": {
+          "type": "TEXT",
+          "defaultValue": "LOADING..."
+        },
+        "Icon#4:190": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "3:17",
+          "preferredValues": []
+        },
+        "Show icon#4:209": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Size": {
+          "type": "VARIANT",
+          "defaultValue": "Compact",
+          "variantOptions": [
+            "Compact",
+            "Default",
+            "Large"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "variantOptions": [
+            "Default",
+            "Hover",
+            "Pressed",
+            "Focus",
+            "Disabled",
+            "Loading"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Button / Danger": {
+      "nodeId": "4:733",
+      "type": "COMPONENT_SET",
+      "page": "03 — Buttons",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=4-733",
+      "css": ".nu-button.nu-button--danger",
+      "variants": 18,
+      "properties": {
+        "Label#4:228": {
+          "type": "TEXT",
+          "defaultValue": "REMOVE ITEM"
+        },
+        "Loading label#4:247": {
+          "type": "TEXT",
+          "defaultValue": "REMOVING..."
+        },
+        "Icon#4:266": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "3:17",
+          "preferredValues": []
+        },
+        "Show icon#4:285": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Size": {
+          "type": "VARIANT",
+          "defaultValue": "Compact",
+          "variantOptions": [
+            "Compact",
+            "Default",
+            "Large"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "variantOptions": [
+            "Default",
+            "Hover",
+            "Pressed",
+            "Focus",
+            "Disabled",
+            "Loading"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Button / Quiet": {
+      "nodeId": "4:927",
+      "type": "COMPONENT_SET",
+      "page": "03 — Buttons",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=4-927",
+      "css": ".nu-button.nu-button--quiet",
+      "variants": 18,
+      "properties": {
+        "Label#4:304": {
+          "type": "TEXT",
+          "defaultValue": "EDIT DETAILS"
+        },
+        "Loading label#4:323": {
+          "type": "TEXT",
+          "defaultValue": "SAVING..."
+        },
+        "Icon#4:342": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "3:17",
+          "preferredValues": []
+        },
+        "Show icon#4:361": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Size": {
+          "type": "VARIANT",
+          "defaultValue": "Compact",
+          "variantOptions": [
+            "Compact",
+            "Default",
+            "Large"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "variantOptions": [
+            "Default",
+            "Hover",
+            "Pressed",
+            "Focus",
+            "Disabled",
+            "Loading"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Button / Icon": {
+      "nodeId": "4:997",
+      "type": "COMPONENT_SET",
+      "page": "03 — Buttons",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=4-997",
+      "css": ".nu-button.nu-button--icon",
+      "variants": 5,
+      "properties": {
+        "Icon#4:380": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "3:107",
+          "preferredValues": []
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "variantOptions": [
+            "Default",
+            "Hover",
+            "Pressed",
+            "Focus",
+            "Disabled"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Field / Text field": {
+      "nodeId": "6:31",
+      "type": "COMPONENT_SET",
+      "page": "04 — Forms",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=6-31",
+      "css": ".nu-field .nu-input",
+      "variants": 5,
+      "properties": {
+        "Label#6:0": {
+          "type": "TEXT",
+          "defaultValue": "EMAIL"
+        },
+        "Value#6:6": {
+          "type": "TEXT",
+          "defaultValue": "alex@example.com"
+        },
+        "Helper#6:12": {
+          "type": "TEXT",
+          "defaultValue": "For your receipt and shipping updates."
+        },
+        "Show helper#6:18": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Placeholder#7:0": {
+          "type": "TEXT",
+          "defaultValue": "you@example.com"
+        },
+        "Error#7:6": {
+          "type": "TEXT",
+          "defaultValue": "Enter a complete email address."
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Empty",
+          "variantOptions": [
+            "Empty",
+            "Filled",
+            "Focus",
+            "Error",
+            "Disabled"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Field / Select": {
+      "nodeId": "6:94",
+      "type": "COMPONENT_SET",
+      "page": "04 — Forms",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=6-94",
+      "css": ".nu-field .nu-select",
+      "variants": 5,
+      "properties": {
+        "Label#6:24": {
+          "type": "TEXT",
+          "defaultValue": "SIZE"
+        },
+        "Value#6:30": {
+          "type": "TEXT",
+          "defaultValue": "Medium"
+        },
+        "Helper#6:36": {
+          "type": "TEXT",
+          "defaultValue": "Select one. Size guide is available."
+        },
+        "Show helper#6:42": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Placeholder#7:12": {
+          "type": "TEXT",
+          "defaultValue": "Choose a size"
+        },
+        "Error#7:18": {
+          "type": "TEXT",
+          "defaultValue": "Choose an available size."
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Empty",
+          "variantOptions": [
+            "Empty",
+            "Filled",
+            "Focus",
+            "Error",
+            "Disabled"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Field / Textarea": {
+      "nodeId": "6:153",
+      "type": "COMPONENT_SET",
+      "page": "04 — Forms",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=6-153",
+      "css": ".nu-field .nu-textarea",
+      "variants": 5,
+      "properties": {
+        "Label#6:48": {
+          "type": "TEXT",
+          "defaultValue": "ORDER NOTE"
+        },
+        "Value#6:54": {
+          "type": "TEXT",
+          "defaultValue": "Leave it at the front desk."
+        },
+        "Helper#6:60": {
+          "type": "TEXT",
+          "defaultValue": "Optional. Keep it short."
+        },
+        "Show helper#6:66": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Placeholder#7:24": {
+          "type": "TEXT",
+          "defaultValue": "Anything we should know?"
+        },
+        "Error#7:30": {
+          "type": "TEXT",
+          "defaultValue": "Keep your note under 240 characters."
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Empty",
+          "variantOptions": [
+            "Empty",
+            "Filled",
+            "Focus",
+            "Error",
+            "Disabled"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Control / Checkbox": {
+      "nodeId": "6:223",
+      "type": "COMPONENT_SET",
+      "page": "04 — Forms",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=6-223",
+      "css": ".nu-check",
+      "variants": 9,
+      "properties": {
+        "Label#6:72": {
+          "type": "TEXT",
+          "defaultValue": "Email me about new drops"
+        },
+        "Value": {
+          "type": "VARIANT",
+          "defaultValue": "Off",
+          "variantOptions": [
+            "Off",
+            "On",
+            "Mixed"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "variantOptions": [
+            "Default",
+            "Focus",
+            "Disabled"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Control / Radio": {
+      "nodeId": "6:250",
+      "type": "COMPONENT_SET",
+      "page": "04 — Forms",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=6-250",
+      "css": ".nu-radio",
+      "variants": 6,
+      "properties": {
+        "Label#6:82": {
+          "type": "TEXT",
+          "defaultValue": "Standard shipping"
+        },
+        "Value": {
+          "type": "VARIANT",
+          "defaultValue": "Off",
+          "variantOptions": [
+            "Off",
+            "On"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "variantOptions": [
+            "Default",
+            "Focus",
+            "Disabled"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Control / Toggle": {
+      "nodeId": "6:277",
+      "type": "COMPONENT_SET",
+      "page": "04 — Forms",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=6-277",
+      "css": ".nu-toggle",
+      "variants": 6,
+      "properties": {
+        "Label#6:89": {
+          "type": "TEXT",
+          "defaultValue": "Enable restock alerts"
+        },
+        "Value": {
+          "type": "VARIANT",
+          "defaultValue": "Off",
+          "variantOptions": [
+            "Off",
+            "On"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "variantOptions": [
+            "Default",
+            "Focus",
+            "Disabled"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Navigation / Tab": {
+      "nodeId": "8:16",
+      "type": "COMPONENT_SET",
+      "page": "05 — App patterns",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=8-16",
+      "css": ".nu-tab",
+      "variants": 5,
+      "properties": {
+        "Label#8:0": {
+          "type": "TEXT",
+          "defaultValue": "ALL ITEMS"
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "variantOptions": [
+            "Default",
+            "Hover",
+            "Active",
+            "Focus",
+            "Disabled"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Status / Badge": {
+      "nodeId": "8:29",
+      "type": "COMPONENT_SET",
+      "page": "05 — App patterns",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=8-29",
+      "css": ".nu-badge",
+      "variants": 6,
+      "properties": {
+        "Label#8:6": {
+          "type": "TEXT",
+          "defaultValue": "NEW"
+        },
+        "Tone": {
+          "type": "VARIANT",
+          "defaultValue": "Neutral",
+          "variantOptions": [
+            "Neutral",
+            "Accent",
+            "Honey",
+            "Success",
+            "Warning",
+            "Danger"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Feedback / Alert": {
+      "nodeId": "8:78",
+      "type": "COMPONENT_SET",
+      "page": "05 — App patterns",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=8-78",
+      "css": ".nu-alert",
+      "variants": 4,
+      "properties": {
+        "Title#8:13": {
+          "type": "TEXT",
+          "defaultValue": "A clear status update"
+        },
+        "Body#8:18": {
+          "type": "TEXT",
+          "defaultValue": "Explain what happened and the next useful step."
+        },
+        "Tone": {
+          "type": "VARIANT",
+          "defaultValue": "Info",
+          "variantOptions": [
+            "Info",
+            "Success",
+            "Warning",
+            "Error"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Data / Stat": {
+      "nodeId": "8:128",
+      "type": "COMPONENT_SET",
+      "page": "05 — App patterns",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=8-128",
+      "css": ".nu-stat",
+      "variants": 3,
+      "properties": {
+        "Value#8:25": {
+          "type": "TEXT",
+          "defaultValue": "24"
+        },
+        "Label#8:29": {
+          "type": "TEXT",
+          "defaultValue": "ORDERS THIS WEEK"
+        },
+        "Tone": {
+          "type": "VARIANT",
+          "defaultValue": "Accent",
+          "variantOptions": [
+            "Accent",
+            "Honey",
+            "Rose"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Data / Progress": {
+      "nodeId": "8:147",
+      "type": "COMPONENT_SET",
+      "page": "05 — App patterns",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=8-147",
+      "css": ".nu-progress",
+      "variants": 3,
+      "properties": {
+        "Label#8:33": {
+          "type": "TEXT",
+          "defaultValue": "WEEKLY GOAL"
+        },
+        "Value#8:37": {
+          "type": "TEXT",
+          "defaultValue": "60 / 100"
+        },
+        "Tone": {
+          "type": "VARIANT",
+          "defaultValue": "Normal",
+          "variantOptions": [
+            "Normal",
+            "Warning",
+            "Error"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Conversation / Message": {
+      "nodeId": "8:256",
+      "type": "COMPONENT_SET",
+      "page": "05 — App patterns",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=8-256",
+      "css": ".nu-message",
+      "variants": 3,
+      "properties": {
+        "Message#8:45": {
+          "type": "TEXT",
+          "defaultValue": "Message goes here."
+        },
+        "Role": {
+          "type": "VARIANT",
+          "defaultValue": "User",
+          "variantOptions": [
+            "User",
+            "Assistant",
+            "Error"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Surface / Card": {
+      "nodeId": "8:116",
+      "type": "COMPONENT",
+      "page": "05 — App patterns",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=8-116",
+      "css": ".nu-card",
+      "source": "styles.css",
+      "description": "Generic content container. Keep a single content purpose; use auto layout. Source .card."
+    },
+    "Overlay / Dialog": {
+      "nodeId": "8:174",
+      "type": "COMPONENT",
+      "page": "05 — App patterns",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=8-174",
+      "css": ".nu-dialog",
+      "source": "styles.css",
+      "description": "Short focused task or confirmation. Trap focus, support Escape, label the dialog, and restore focus to its trigger. Never nest dialogs."
+    },
+    "Feedback / Empty state": {
+      "nodeId": "8:200",
+      "type": "COMPONENT",
+      "page": "05 — App patterns",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=8-200",
+      "css": ".nu-empty",
+      "source": "styles.css",
+      "description": "Explain why the view is empty and give one useful next step. Use factual search, bag or collection-specific copy."
+    },
+    "Commerce / Price": {
+      "nodeId": "10:19",
+      "type": "COMPONENT_SET",
+      "page": "06 — Commerce",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=10-19",
+      "css": ".nu-price",
+      "variants": 2,
+      "properties": {
+        "Amount#10:0": {
+          "type": "TEXT",
+          "defaultValue": "CA$36"
+        },
+        "Compare at#10:3": {
+          "type": "TEXT",
+          "defaultValue": "CA$44"
+        },
+        "Type": {
+          "type": "VARIANT",
+          "defaultValue": "Regular",
+          "variantOptions": [
+            "Regular",
+            "Sale"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Commerce / Availability": {
+      "nodeId": "10:35",
+      "type": "COMPONENT_SET",
+      "page": "06 — Commerce",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=10-35",
+      "css": ".nu-row .nu-icon + .nu-label",
+      "variants": 3,
+      "properties": {
+        "Status": {
+          "type": "VARIANT",
+          "defaultValue": "In stock",
+          "variantOptions": [
+            "In stock",
+            "Low stock",
+            "Sold out"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Commerce / Option": {
+      "nodeId": "10:44",
+      "type": "COMPONENT_SET",
+      "page": "06 — Commerce",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=10-44",
+      "css": ".nu-choice",
+      "variants": 4,
+      "properties": {
+        "Label#10:6": {
+          "type": "TEXT",
+          "defaultValue": "M"
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Available",
+          "variantOptions": [
+            "Available",
+            "Selected",
+            "Unavailable",
+            "Focus"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Commerce / Quantity": {
+      "nodeId": "10:101",
+      "type": "COMPONENT_SET",
+      "page": "06 — Commerce",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=10-101",
+      "css": ".nu-quantity",
+      "variants": 4,
+      "properties": {
+        "Quantity#10:11": {
+          "type": "TEXT",
+          "defaultValue": "1"
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "variantOptions": [
+            "Default",
+            "Minimum",
+            "Maximum",
+            "Disabled"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Commerce / Product card": {
+      "nodeId": "10:144",
+      "type": "COMPONENT_SET",
+      "page": "06 — Commerce",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=10-144",
+      "css": ".nu-product",
+      "variants": 3,
+      "properties": {
+        "Title#10:16": {
+          "type": "TEXT",
+          "defaultValue": "Everyday tee"
+        },
+        "Details#10:20": {
+          "type": "TEXT",
+          "defaultValue": "Heavyweight cotton · 3 colors"
+        },
+        "Price#10:24": {
+          "type": "TEXT",
+          "defaultValue": "CA$36"
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Available",
+          "variantOptions": [
+            "Available",
+            "Hover",
+            "Sold out"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Commerce / Cart item": {
+      "nodeId": "10:347",
+      "type": "COMPONENT_SET",
+      "page": "06 — Commerce",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=10-347",
+      "css": ".nu-cart-item",
+      "variants": 4,
+      "properties": {
+        "Title#10:28": {
+          "type": "TEXT",
+          "defaultValue": "Everyday tee"
+        },
+        "Variant#10:33": {
+          "type": "TEXT",
+          "defaultValue": "Honey / Medium"
+        },
+        "Price#10:38": {
+          "type": "TEXT",
+          "defaultValue": "CA$36"
+        },
+        "Layout": {
+          "type": "VARIANT",
+          "defaultValue": "Wide",
+          "variantOptions": [
+            "Wide",
+            "Narrow"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Available",
+          "variantOptions": [
+            "Available",
+            "Unavailable"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Commerce / Order summary": {
+      "nodeId": "10:394",
+      "type": "COMPONENT_SET",
+      "page": "06 — Commerce",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=10-394",
+      "css": ".nu-summary",
+      "variants": 2,
+      "properties": {
+        "Stage": {
+          "type": "VARIANT",
+          "defaultValue": "Cart",
+          "variantOptions": [
+            "Cart",
+            "Checkout"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Commerce / Checkout step": {
+      "nodeId": "10:505",
+      "type": "COMPONENT_SET",
+      "page": "06 — Commerce",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=10-505",
+      "css": ".nu-order-steps",
+      "variants": 3,
+      "properties": {
+        "Number#10:43": {
+          "type": "TEXT",
+          "defaultValue": "02"
+        },
+        "Label#10:47": {
+          "type": "TEXT",
+          "defaultValue": "DELIVERY"
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Upcoming",
+          "variantOptions": [
+            "Upcoming",
+            "Current",
+            "Complete"
+          ]
+        }
+      },
+      "source": "styles.css"
+    },
+    "Commerce / Media slot": {
+      "nodeId": "10:6",
+      "type": "COMPONENT",
+      "page": "06 — Commerce",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=10-6",
+      "css": ".nu-product__media",
+      "source": "styles.css",
+      "description": "Replace this editable media slot with a product image. Preserve its aspect ratio and add product-specific alt text in code."
+    },
+    "Commerce / Discount code": {
+      "nodeId": "10:479",
+      "type": "COMPONENT",
+      "page": "06 — Commerce",
+      "url": "https://www.figma.com/design/4fo7YNMa0iH4Yydo2YwGSe?node-id=10-479",
+      "css": ".nu-field .nu-input + .nu-button",
+      "source": "styles.css",
+      "description": "Optional discount entry. Keep the applied code and discount amount visible. Explain expired, invalid and ineligible codes."
+    }
+  },
+  "tokens": {
+    "color.primitive.black": {
+      "variableId": "VariableID:2:5",
+      "figmaName": "palette/black",
+      "css": "var(--black)"
+    },
+    "color.primitive.white": {
+      "variableId": "VariableID:2:6",
+      "figmaName": "palette/white",
+      "css": "var(--white)"
+    },
+    "color.primitive.yellow": {
+      "variableId": "VariableID:2:7",
+      "figmaName": "palette/yellow",
+      "css": "var(--yellow)"
+    },
+    "color.primitive.honey": {
+      "variableId": "VariableID:2:8",
+      "figmaName": "palette/honey",
+      "css": "var(--honey)"
+    },
+    "color.primitive.red": {
+      "variableId": "VariableID:2:9",
+      "figmaName": "palette/red",
+      "css": "var(--red)"
+    },
+    "color.primitive.green": {
+      "variableId": "VariableID:2:10",
+      "figmaName": "palette/green",
+      "css": "var(--green)"
+    },
+    "color.primitive.cream": {
+      "variableId": "VariableID:2:11",
+      "figmaName": "palette/cream",
+      "css": "var(--cream)"
+    },
+    "color.primitive.amber": {
+      "variableId": "VariableID:2:12",
+      "figmaName": "palette/amber",
+      "css": "var(--amber)"
+    },
+    "color.primitive.pink": {
+      "variableId": "VariableID:2:13",
+      "figmaName": "palette/pink",
+      "css": "var(--pink)"
+    },
+    "color.primitive.success-dark": {
+      "variableId": "VariableID:2:16",
+      "figmaName": "palette/success-ink",
+      "css": "var(--success-dark)"
+    },
+    "color.primitive.muted-ink": {
+      "variableId": "VariableID:2:17",
+      "figmaName": "palette/muted-ink",
+      "css": "var(--muted-ink)"
+    },
+    "color.primitive.dots": {
+      "variableId": "VariableID:2:14",
+      "figmaName": "palette/dot",
+      "css": "var(--dots)"
+    },
+    "color.primitive.hover-ink": {
+      "variableId": "VariableID:2:15",
+      "figmaName": "palette/hover",
+      "css": "var(--hover-ink)"
+    },
+    "color.semantic.bg": {
+      "variableId": "VariableID:2:18",
+      "figmaName": "color/bg",
+      "css": "var(--nu-bg)"
+    },
+    "color.semantic.surface": {
+      "variableId": "VariableID:2:19",
+      "figmaName": "color/surface",
+      "css": "var(--nu-surface)"
+    },
+    "color.semantic.ink": {
+      "variableId": "VariableID:2:21",
+      "figmaName": "color/ink",
+      "css": "var(--nu-ink)"
+    },
+    "color.semantic.muted": {
+      "variableId": "VariableID:2:22",
+      "figmaName": "color/muted",
+      "css": "var(--nu-muted)"
+    },
+    "color.semantic.accent": {
+      "variableId": "VariableID:2:23",
+      "figmaName": "color/accent",
+      "css": "var(--nu-accent)"
+    },
+    "color.semantic.honey": {
+      "variableId": "VariableID:2:24",
+      "figmaName": "color/honey",
+      "css": "var(--nu-honey)"
+    },
+    "color.semantic.danger": {
+      "variableId": "VariableID:2:25",
+      "figmaName": "color/danger",
+      "css": "var(--nu-danger)"
+    },
+    "color.semantic.success": {
+      "variableId": "VariableID:2:26",
+      "figmaName": "color/success",
+      "css": "var(--nu-success)"
+    },
+    "color.semantic.border": {
+      "variableId": "VariableID:2:27",
+      "figmaName": "color/border",
+      "css": "var(--nu-border)"
+    },
+    "color.semantic.on-strong": {
+      "variableId": "VariableID:2:28",
+      "figmaName": "color/on-strong",
+      "css": "var(--nu-on-strong)"
+    },
+    "color.semantic.strong": {
+      "variableId": "VariableID:2:29",
+      "figmaName": "color/strong",
+      "css": "var(--nu-strong)"
+    },
+    "color.semantic.disabled-bg": {
+      "variableId": "VariableID:2:30",
+      "figmaName": "color/disabled-bg",
+      "css": "var(--nu-disabled-bg)"
+    },
+    "color.semantic.subtle": {
+      "variableId": "VariableID:2:20",
+      "figmaName": "color/surface-muted",
+      "css": "var(--nu-subtle)"
+    },
+    "color.semantic.warning": {
+      "variableId": "VariableID:2:33",
+      "figmaName": "color/amber",
+      "css": "var(--nu-warning)"
+    },
+    "color.semantic.rose": {
+      "variableId": "VariableID:2:32",
+      "figmaName": "color/pink",
+      "css": "var(--nu-rose)"
+    },
+    "color.semantic.on-danger": {
+      "variableId": "VariableID:2:31",
+      "figmaName": "color/on-danger",
+      "css": "var(--nu-on-danger)"
+    },
+    "color.semantic.on-success": {
+      "variableId": "VariableID:12:62",
+      "figmaName": "color/on-success",
+      "css": "var(--nu-on-success)"
+    },
+    "space.0": {
+      "variableId": "VariableID:2:38",
+      "figmaName": "space/0",
+      "css": "var(--nu-space-0)"
+    },
+    "space.2": {
+      "variableId": "VariableID:2:39",
+      "figmaName": "space/2",
+      "css": "var(--nu-space-2)"
+    },
+    "space.3": {
+      "variableId": "VariableID:12:63",
+      "figmaName": "space/3",
+      "css": "var(--nu-space-3)"
+    },
+    "space.4": {
+      "variableId": "VariableID:2:40",
+      "figmaName": "space/4",
+      "css": "var(--nu-space-4)"
+    },
+    "space.5": {
+      "variableId": "VariableID:12:64",
+      "figmaName": "space/5",
+      "css": "var(--nu-space-5)"
+    },
+    "space.6": {
+      "variableId": "VariableID:2:41",
+      "figmaName": "space/6",
+      "css": "var(--nu-space-6)"
+    },
+    "space.7": {
+      "variableId": "VariableID:12:65",
+      "figmaName": "space/7",
+      "css": "var(--nu-space-7)"
+    },
+    "space.8": {
+      "variableId": "VariableID:2:42",
+      "figmaName": "space/8",
+      "css": "var(--nu-space-8)"
+    },
+    "space.10": {
+      "variableId": "VariableID:2:43",
+      "figmaName": "space/10",
+      "css": "var(--nu-space-10)"
+    },
+    "space.12": {
+      "variableId": "VariableID:2:44",
+      "figmaName": "space/12",
+      "css": "var(--nu-space-12)"
+    },
+    "space.14": {
+      "variableId": "VariableID:12:66",
+      "figmaName": "space/14",
+      "css": "var(--nu-space-14)"
+    },
+    "space.16": {
+      "variableId": "VariableID:2:45",
+      "figmaName": "space/16",
+      "css": "var(--nu-space-16)"
+    },
+    "space.18": {
+      "variableId": "VariableID:12:67",
+      "figmaName": "space/18",
+      "css": "var(--nu-space-18)"
+    },
+    "space.20": {
+      "variableId": "VariableID:2:46",
+      "figmaName": "space/20",
+      "css": "var(--nu-space-20)"
+    },
+    "space.24": {
+      "variableId": "VariableID:2:47",
+      "figmaName": "space/24",
+      "css": "var(--nu-space-24)"
+    },
+    "space.28": {
+      "variableId": "VariableID:12:68",
+      "figmaName": "space/28",
+      "css": "var(--nu-space-28)"
+    },
+    "space.32": {
+      "variableId": "VariableID:2:48",
+      "figmaName": "space/32",
+      "css": "var(--nu-space-32)"
+    },
+    "space.40": {
+      "variableId": "VariableID:2:49",
+      "figmaName": "space/40",
+      "css": "var(--nu-space-40)"
+    },
+    "space.48": {
+      "variableId": "VariableID:2:50",
+      "figmaName": "space/48",
+      "css": "var(--nu-space-48)"
+    },
+    "space.64": {
+      "variableId": "VariableID:2:51",
+      "figmaName": "space/64",
+      "css": "var(--nu-space-64)"
+    },
+    "space.80": {
+      "variableId": "VariableID:2:52",
+      "figmaName": "space/80",
+      "css": "var(--nu-space-80)"
+    },
+    "border.width": {
+      "variableId": "VariableID:2:53",
+      "figmaName": "border/default",
+      "css": "var(--nu-border-width)"
+    },
+    "border.thin": {
+      "variableId": "VariableID:2:54",
+      "figmaName": "border/fine",
+      "css": "var(--nu-border-thin)"
+    },
+    "border.radius": {
+      "variableId": "VariableID:2:55",
+      "figmaName": "radius/none",
+      "css": "var(--nu-radius)"
+    },
+    "size.control": {
+      "variableId": "VariableID:2:56",
+      "figmaName": "size/control",
+      "css": "var(--nu-size-control)"
+    },
+    "size.control-large": {
+      "variableId": "VariableID:2:58",
+      "figmaName": "size/large",
+      "css": "var(--nu-size-control-large)"
+    },
+    "size.control-compact": {
+      "variableId": "VariableID:2:57",
+      "figmaName": "size/compact",
+      "css": "var(--nu-size-control-compact)"
+    },
+    "size.icon": {
+      "variableId": "VariableID:2:59",
+      "figmaName": "size/icon",
+      "css": "var(--nu-size-icon)"
+    },
+    "size.icon-source": {
+      "variableId": "VariableID:2:60",
+      "figmaName": "size/icon-box",
+      "css": "var(--nu-size-icon-source)"
+    },
+    "size.content": {
+      "variableId": "VariableID:12:69",
+      "figmaName": "size/content",
+      "css": "var(--nu-size-content)"
+    },
+    "size.source-app": {
+      "variableId": "VariableID:12:70",
+      "figmaName": "size/source-app",
+      "css": "var(--nu-size-source-app)"
+    },
+    "size.dialog": {
+      "variableId": "VariableID:12:71",
+      "figmaName": "size/dialog",
+      "css": "var(--nu-size-dialog)"
+    },
+    "type.family.sans": {
+      "variableId": "VariableID:2:66",
+      "figmaName": "font/sans",
+      "css": "var(--nu-font)"
+    },
+    "type.family.mono": {
+      "variableId": "VariableID:2:67",
+      "figmaName": "font/mono",
+      "css": "var(--nu-mono)"
+    },
+    "type.weight.400": {
+      "variableId": "VariableID:12:72",
+      "figmaName": "type/weight/400",
+      "css": "var(--nu-weight-400)"
+    },
+    "type.weight.500": {
+      "variableId": "VariableID:12:73",
+      "figmaName": "type/weight/500",
+      "css": "var(--nu-weight-500)"
+    },
+    "type.weight.700": {
+      "variableId": "VariableID:12:74",
+      "figmaName": "type/weight/700",
+      "css": "var(--nu-weight-700)"
+    },
+    "type.size.10": {
+      "variableId": "VariableID:12:75",
+      "figmaName": "type/size/10",
+      "css": "var(--nu-text-10)"
+    },
+    "type.size.11": {
+      "variableId": "VariableID:12:76",
+      "figmaName": "type/size/11",
+      "css": "var(--nu-text-11)"
+    },
+    "type.size.12": {
+      "variableId": "VariableID:12:77",
+      "figmaName": "type/size/12",
+      "css": "var(--nu-text-12)"
+    },
+    "type.size.13": {
+      "variableId": "VariableID:12:78",
+      "figmaName": "type/size/13",
+      "css": "var(--nu-text-13)"
+    },
+    "type.size.14": {
+      "variableId": "VariableID:12:79",
+      "figmaName": "type/size/14",
+      "css": "var(--nu-text-14)"
+    },
+    "type.size.16": {
+      "variableId": "VariableID:12:80",
+      "figmaName": "type/size/16",
+      "css": "var(--nu-text-16)"
+    },
+    "type.size.18": {
+      "variableId": "VariableID:12:81",
+      "figmaName": "type/size/18",
+      "css": "var(--nu-text-18)"
+    },
+    "type.size.22": {
+      "variableId": "VariableID:12:82",
+      "figmaName": "type/size/22",
+      "css": "var(--nu-text-22)"
+    },
+    "type.size.24": {
+      "variableId": "VariableID:12:83",
+      "figmaName": "type/size/24",
+      "css": "var(--nu-text-24)"
+    },
+    "type.size.28": {
+      "variableId": "VariableID:12:84",
+      "figmaName": "type/size/28",
+      "css": "var(--nu-text-28)"
+    },
+    "type.size.32": {
+      "variableId": "VariableID:12:85",
+      "figmaName": "type/size/32",
+      "css": "var(--nu-text-32)"
+    },
+    "type.size.36": {
+      "variableId": "VariableID:12:86",
+      "figmaName": "type/size/36",
+      "css": "var(--nu-text-36)"
+    },
+    "type.size.48": {
+      "variableId": "VariableID:12:87",
+      "figmaName": "type/size/48",
+      "css": "var(--nu-text-48)"
+    },
+    "type.size.64": {
+      "variableId": "VariableID:12:88",
+      "figmaName": "type/size/64",
+      "css": "var(--nu-text-64)"
+    },
+    "type.size.72": {
+      "variableId": "VariableID:12:89",
+      "figmaName": "type/size/72",
+      "css": "var(--nu-text-72)"
+    },
+    "shadowOffset.1": {
+      "variableId": "VariableID:2:61",
+      "figmaName": "shadow/1",
+      "css": "var(--nu-shadow-offset-1)"
+    },
+    "shadowOffset.3": {
+      "variableId": "VariableID:2:62",
+      "figmaName": "shadow/3",
+      "css": "var(--nu-shadow-offset-3)"
+    },
+    "shadowOffset.4": {
+      "variableId": "VariableID:2:63",
+      "figmaName": "shadow/4",
+      "css": "var(--nu-shadow-offset-4)"
+    },
+    "shadowOffset.5": {
+      "variableId": "VariableID:2:64",
+      "figmaName": "shadow/5",
+      "css": "var(--nu-shadow-offset-5)"
+    },
+    "shadowOffset.7": {
+      "variableId": "VariableID:2:65",
+      "figmaName": "shadow/7",
+      "css": "var(--nu-shadow-offset-7)"
+    },
+    "shadow.pressed": {
+      "effectStyleId": "S:71d89d15d9e8b72e7325572a106261c7ac8f806c,",
+      "css": "var(--nu-shadow-pressed)"
+    },
+    "shadow.small": {
+      "effectStyleId": "S:77493bc9a47030071b8b15b73d9e22fe57c7e30e,",
+      "css": "var(--nu-shadow-small)"
+    },
+    "shadow.hover": {
+      "effectStyleId": "S:118534205d051a1c9ac55c211056d100d47528e7,",
+      "css": "var(--nu-shadow-hover)"
+    },
+    "shadow.default": {
+      "effectStyleId": "S:24fd7e18746e09e82135f60b4dc6bd6324de9df2,",
+      "css": "var(--nu-shadow-default)"
+    },
+    "shadow.large": {
+      "effectStyleId": "S:3afce7f24c039acb1a8fc40693d9f0f5705681a4,",
+      "css": "var(--nu-shadow-large)"
+    }
+  },
+  "variables": [
+    {
+      "id": "VariableID:2:5",
+      "name": "palette/black",
+      "type": "COLOR",
+      "css": "var(--black)",
+      "scopes": [],
+      "values": {
+        "2:0": {
+          "r": 0.10196078568696976,
+          "g": 0.08235294371843338,
+          "b": 0.062745101749897,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:6",
+      "name": "palette/white",
+      "type": "COLOR",
+      "css": "var(--white)",
+      "scopes": [],
+      "values": {
+        "2:0": {
+          "r": 0.9921568632125854,
+          "g": 0.9647058844566345,
+          "b": 0.9254902005195618,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:7",
+      "name": "palette/yellow",
+      "type": "COLOR",
+      "css": "var(--yellow)",
+      "scopes": [],
+      "values": {
+        "2:0": {
+          "r": 0.9098039269447327,
+          "g": 0.7843137383460999,
+          "b": 0.29019609093666077,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:8",
+      "name": "palette/honey",
+      "type": "COLOR",
+      "css": "var(--honey)",
+      "scopes": [],
+      "values": {
+        "2:0": {
+          "r": 0.8313725590705872,
+          "g": 0.658823549747467,
+          "b": 0.3607843220233917,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:9",
+      "name": "palette/red",
+      "type": "COLOR",
+      "css": "var(--red)",
+      "scopes": [],
+      "values": {
+        "2:0": {
+          "r": 0.7529411911964417,
+          "g": 0.2666666805744171,
+          "b": 0.10980392247438431,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:10",
+      "name": "palette/green",
+      "type": "COLOR",
+      "css": "var(--green)",
+      "scopes": [],
+      "values": {
+        "2:0": {
+          "r": 0.3529411852359772,
+          "g": 0.5411764979362488,
+          "b": 0.23529411852359772,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:11",
+      "name": "palette/cream",
+      "type": "COLOR",
+      "css": "var(--cream)",
+      "scopes": [],
+      "values": {
+        "2:0": {
+          "r": 0.9607843160629272,
+          "g": 0.9176470637321472,
+          "b": 0.8470588326454163,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:12",
+      "name": "palette/amber",
+      "type": "COLOR",
+      "css": "var(--amber)",
+      "scopes": [],
+      "values": {
+        "2:0": {
+          "r": 0.7882353067398071,
+          "g": 0.48627451062202454,
+          "b": 0.16470588743686676,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:13",
+      "name": "palette/pink",
+      "type": "COLOR",
+      "css": "var(--pink)",
+      "scopes": [],
+      "values": {
+        "2:0": {
+          "r": 0.8313725590705872,
+          "g": 0.5843137502670288,
+          "b": 0.4156862795352936,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:14",
+      "name": "palette/dot",
+      "type": "COLOR",
+      "css": "var(--dots)",
+      "scopes": [],
+      "values": {
+        "2:0": {
+          "r": 0.7215686440467834,
+          "g": 0.658823549747467,
+          "b": 0.5960784554481506,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:15",
+      "name": "palette/hover",
+      "type": "COLOR",
+      "css": "var(--hover-ink)",
+      "scopes": [],
+      "values": {
+        "2:0": {
+          "r": 0.13333334028720856,
+          "g": 0.13333334028720856,
+          "b": 0.13333334028720856,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:16",
+      "name": "palette/success-ink",
+      "type": "COLOR",
+      "css": "var(--success-dark)",
+      "scopes": [],
+      "values": {
+        "2:0": {
+          "r": 0.21176470816135406,
+          "g": 0.3294117748737335,
+          "b": 0.13725490868091583,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:17",
+      "name": "palette/muted-ink",
+      "type": "COLOR",
+      "css": "var(--muted-ink)",
+      "scopes": [],
+      "values": {
+        "2:0": {
+          "r": 0.4588235318660736,
+          "g": 0.40784314274787903,
+          "b": 0.3450980484485626,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:18",
+      "name": "color/bg",
+      "type": "COLOR",
+      "css": "var(--nu-bg)",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:6"
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:19",
+      "name": "color/surface",
+      "type": "COLOR",
+      "css": "var(--nu-surface)",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:6"
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:20",
+      "name": "color/surface-muted",
+      "type": "COLOR",
+      "css": "var(--nu-subtle)",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:11"
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:21",
+      "name": "color/ink",
+      "type": "COLOR",
+      "css": "var(--nu-ink)",
+      "scopes": [
+        "TEXT_FILL",
+        "STROKE_COLOR"
+      ],
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:5"
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:22",
+      "name": "color/muted",
+      "type": "COLOR",
+      "css": "var(--nu-muted)",
+      "scopes": [
+        "TEXT_FILL"
+      ],
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:17"
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:23",
+      "name": "color/accent",
+      "type": "COLOR",
+      "css": "var(--nu-accent)",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:7"
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:24",
+      "name": "color/honey",
+      "type": "COLOR",
+      "css": "var(--nu-honey)",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:8"
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:25",
+      "name": "color/danger",
+      "type": "COLOR",
+      "css": "var(--nu-danger)",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL",
+        "TEXT_FILL",
+        "STROKE_COLOR"
+      ],
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:9"
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:26",
+      "name": "color/success",
+      "type": "COLOR",
+      "css": "var(--nu-success)",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL",
+        "TEXT_FILL",
+        "STROKE_COLOR"
+      ],
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:16"
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:27",
+      "name": "color/border",
+      "type": "COLOR",
+      "css": "var(--nu-border)",
+      "scopes": [
+        "STROKE_COLOR"
+      ],
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:5"
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:28",
+      "name": "color/on-strong",
+      "type": "COLOR",
+      "css": "var(--nu-on-strong)",
+      "scopes": [
+        "TEXT_FILL",
+        "STROKE_COLOR"
+      ],
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:7"
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:29",
+      "name": "color/strong",
+      "type": "COLOR",
+      "css": "var(--nu-strong)",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:5"
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:30",
+      "name": "color/disabled-bg",
+      "type": "COLOR",
+      "css": "var(--nu-disabled-bg)",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:11"
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:31",
+      "name": "color/on-danger",
+      "type": "COLOR",
+      "css": "var(--nu-on-danger)",
+      "scopes": [
+        "TEXT_FILL",
+        "STROKE_COLOR"
+      ],
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:6"
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:32",
+      "name": "color/pink",
+      "type": "COLOR",
+      "css": "var(--nu-rose)",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:13"
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:33",
+      "name": "color/amber",
+      "type": "COLOR",
+      "css": "var(--nu-warning)",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:12"
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:34",
+      "name": "color/green",
+      "type": "COLOR",
+      "css": "var(--green)",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:10"
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:35",
+      "name": "color/hover",
+      "type": "COLOR",
+      "css": "var(--hover-ink)",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:15"
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:36",
+      "name": "color/dot",
+      "type": "COLOR",
+      "css": "var(--dots)",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:14"
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:37",
+      "name": "color/shadow",
+      "type": "COLOR",
+      "css": "var(--black)",
+      "scopes": [
+        "EFFECT_COLOR"
+      ],
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:5"
+        }
+      }
+    },
+    {
+      "id": "VariableID:2:38",
+      "name": "space/0",
+      "type": "FLOAT",
+      "css": "var(--nu-space-0)",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "2:2": 0
+      }
+    },
+    {
+      "id": "VariableID:2:39",
+      "name": "space/2",
+      "type": "FLOAT",
+      "css": "var(--nu-space-2)",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "2:2": 2
+      }
+    },
+    {
+      "id": "VariableID:2:40",
+      "name": "space/4",
+      "type": "FLOAT",
+      "css": "var(--nu-space-4)",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "2:2": 4
+      }
+    },
+    {
+      "id": "VariableID:2:41",
+      "name": "space/6",
+      "type": "FLOAT",
+      "css": "var(--nu-space-6)",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "2:2": 6
+      }
+    },
+    {
+      "id": "VariableID:2:42",
+      "name": "space/8",
+      "type": "FLOAT",
+      "css": "var(--nu-space-8)",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "2:2": 8
+      }
+    },
+    {
+      "id": "VariableID:2:43",
+      "name": "space/10",
+      "type": "FLOAT",
+      "css": "var(--nu-space-10)",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "2:2": 10
+      }
+    },
+    {
+      "id": "VariableID:2:44",
+      "name": "space/12",
+      "type": "FLOAT",
+      "css": "var(--nu-space-12)",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "2:2": 12
+      }
+    },
+    {
+      "id": "VariableID:2:45",
+      "name": "space/16",
+      "type": "FLOAT",
+      "css": "var(--nu-space-16)",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "2:2": 16
+      }
+    },
+    {
+      "id": "VariableID:2:46",
+      "name": "space/20",
+      "type": "FLOAT",
+      "css": "var(--nu-space-20)",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "2:2": 20
+      }
+    },
+    {
+      "id": "VariableID:2:47",
+      "name": "space/24",
+      "type": "FLOAT",
+      "css": "var(--nu-space-24)",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "2:2": 24
+      }
+    },
+    {
+      "id": "VariableID:2:48",
+      "name": "space/32",
+      "type": "FLOAT",
+      "css": "var(--nu-space-32)",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "2:2": 32
+      }
+    },
+    {
+      "id": "VariableID:2:49",
+      "name": "space/40",
+      "type": "FLOAT",
+      "css": "var(--nu-space-40)",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "2:2": 40
+      }
+    },
+    {
+      "id": "VariableID:2:50",
+      "name": "space/48",
+      "type": "FLOAT",
+      "css": "var(--nu-space-48)",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "2:2": 48
+      }
+    },
+    {
+      "id": "VariableID:2:51",
+      "name": "space/64",
+      "type": "FLOAT",
+      "css": "var(--nu-space-64)",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "2:2": 64
+      }
+    },
+    {
+      "id": "VariableID:2:52",
+      "name": "space/80",
+      "type": "FLOAT",
+      "css": "var(--nu-space-80)",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "2:2": 80
+      }
+    },
+    {
+      "id": "VariableID:2:53",
+      "name": "border/default",
+      "type": "FLOAT",
+      "css": "var(--nu-border-width)",
+      "scopes": [
+        "STROKE_FLOAT"
+      ],
+      "values": {
+        "2:2": 3
+      }
+    },
+    {
+      "id": "VariableID:2:54",
+      "name": "border/fine",
+      "type": "FLOAT",
+      "css": "var(--nu-border-thin)",
+      "scopes": [
+        "STROKE_FLOAT"
+      ],
+      "values": {
+        "2:2": 2
+      }
+    },
+    {
+      "id": "VariableID:2:55",
+      "name": "radius/none",
+      "type": "FLOAT",
+      "css": "var(--nu-radius)",
+      "scopes": [
+        "CORNER_RADIUS"
+      ],
+      "values": {
+        "2:2": 0
+      }
+    },
+    {
+      "id": "VariableID:2:56",
+      "name": "size/control",
+      "type": "FLOAT",
+      "css": "var(--nu-size-control)",
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "values": {
+        "2:2": 44
+      }
+    },
+    {
+      "id": "VariableID:2:57",
+      "name": "size/compact",
+      "type": "FLOAT",
+      "css": "var(--nu-size-control-compact)",
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "values": {
+        "2:2": 32
+      }
+    },
+    {
+      "id": "VariableID:2:58",
+      "name": "size/large",
+      "type": "FLOAT",
+      "css": "var(--nu-size-control-large)",
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "values": {
+        "2:2": 52
+      }
+    },
+    {
+      "id": "VariableID:2:59",
+      "name": "size/icon",
+      "type": "FLOAT",
+      "css": "var(--nu-size-icon)",
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "values": {
+        "2:2": 20
+      }
+    },
+    {
+      "id": "VariableID:2:60",
+      "name": "size/icon-box",
+      "type": "FLOAT",
+      "css": "var(--nu-size-icon-source)",
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "values": {
+        "2:2": 24
+      }
+    },
+    {
+      "id": "VariableID:2:61",
+      "name": "shadow/1",
+      "type": "FLOAT",
+      "css": "var(--nu-shadow-offset-1)",
+      "scopes": [
+        "EFFECT_FLOAT"
+      ],
+      "values": {
+        "2:2": 1
+      }
+    },
+    {
+      "id": "VariableID:2:62",
+      "name": "shadow/3",
+      "type": "FLOAT",
+      "css": "var(--nu-shadow-offset-3)",
+      "scopes": [
+        "EFFECT_FLOAT"
+      ],
+      "values": {
+        "2:2": 3
+      }
+    },
+    {
+      "id": "VariableID:2:63",
+      "name": "shadow/4",
+      "type": "FLOAT",
+      "css": "var(--nu-shadow-offset-4)",
+      "scopes": [
+        "EFFECT_FLOAT"
+      ],
+      "values": {
+        "2:2": 4
+      }
+    },
+    {
+      "id": "VariableID:2:64",
+      "name": "shadow/5",
+      "type": "FLOAT",
+      "css": "var(--nu-shadow-offset-5)",
+      "scopes": [
+        "EFFECT_FLOAT"
+      ],
+      "values": {
+        "2:2": 5
+      }
+    },
+    {
+      "id": "VariableID:2:65",
+      "name": "shadow/7",
+      "type": "FLOAT",
+      "css": "var(--nu-shadow-offset-7)",
+      "scopes": [
+        "EFFECT_FLOAT"
+      ],
+      "values": {
+        "2:2": 7
+      }
+    },
+    {
+      "id": "VariableID:2:66",
+      "name": "font/sans",
+      "type": "STRING",
+      "css": "var(--nu-font)",
+      "scopes": [
+        "FONT_FAMILY"
+      ],
+      "values": {
+        "2:2": "Space Grotesk"
+      }
+    },
+    {
+      "id": "VariableID:2:67",
+      "name": "font/mono",
+      "type": "STRING",
+      "css": "var(--nu-mono)",
+      "scopes": [
+        "FONT_FAMILY"
+      ],
+      "values": {
+        "2:2": "DM Mono"
+      }
+    },
+    {
+      "id": "VariableID:12:62",
+      "name": "color/on-success",
+      "type": "COLOR",
+      "css": "var(--nu-on-success)",
+      "scopes": [
+        "TEXT_FILL"
+      ],
+      "values": {
+        "2:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:2:6"
+        }
+      }
+    },
+    {
+      "id": "VariableID:12:63",
+      "name": "space/3",
+      "type": "FLOAT",
+      "css": "var(--nu-space-3)",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "2:2": 3
+      }
+    },
+    {
+      "id": "VariableID:12:64",
+      "name": "space/5",
+      "type": "FLOAT",
+      "css": "var(--nu-space-5)",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "2:2": 5
+      }
+    },
+    {
+      "id": "VariableID:12:65",
+      "name": "space/7",
+      "type": "FLOAT",
+      "css": "var(--nu-space-7)",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "2:2": 7
+      }
+    },
+    {
+      "id": "VariableID:12:66",
+      "name": "space/14",
+      "type": "FLOAT",
+      "css": "var(--nu-space-14)",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "2:2": 14
+      }
+    },
+    {
+      "id": "VariableID:12:67",
+      "name": "space/18",
+      "type": "FLOAT",
+      "css": "var(--nu-space-18)",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "2:2": 18
+      }
+    },
+    {
+      "id": "VariableID:12:68",
+      "name": "space/28",
+      "type": "FLOAT",
+      "css": "var(--nu-space-28)",
+      "scopes": [
+        "GAP"
+      ],
+      "values": {
+        "2:2": 28
+      }
+    },
+    {
+      "id": "VariableID:12:69",
+      "name": "size/content",
+      "type": "FLOAT",
+      "css": "var(--nu-size-content)",
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "values": {
+        "2:2": 1200
+      }
+    },
+    {
+      "id": "VariableID:12:70",
+      "name": "size/source-app",
+      "type": "FLOAT",
+      "css": "var(--nu-size-source-app)",
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "values": {
+        "2:2": 780
+      }
+    },
+    {
+      "id": "VariableID:12:71",
+      "name": "size/dialog",
+      "type": "FLOAT",
+      "css": "var(--nu-size-dialog)",
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "values": {
+        "2:2": 520
+      }
+    },
+    {
+      "id": "VariableID:12:72",
+      "name": "type/weight/400",
+      "type": "FLOAT",
+      "css": "var(--nu-weight-400)",
+      "scopes": [
+        "FONT_WEIGHT"
+      ],
+      "values": {
+        "2:2": 400
+      }
+    },
+    {
+      "id": "VariableID:12:73",
+      "name": "type/weight/500",
+      "type": "FLOAT",
+      "css": "var(--nu-weight-500)",
+      "scopes": [
+        "FONT_WEIGHT"
+      ],
+      "values": {
+        "2:2": 500
+      }
+    },
+    {
+      "id": "VariableID:12:74",
+      "name": "type/weight/700",
+      "type": "FLOAT",
+      "css": "var(--nu-weight-700)",
+      "scopes": [
+        "FONT_WEIGHT"
+      ],
+      "values": {
+        "2:2": 700
+      }
+    },
+    {
+      "id": "VariableID:12:75",
+      "name": "type/size/10",
+      "type": "FLOAT",
+      "css": "var(--nu-text-10)",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "values": {
+        "2:2": 10
+      }
+    },
+    {
+      "id": "VariableID:12:76",
+      "name": "type/size/11",
+      "type": "FLOAT",
+      "css": "var(--nu-text-11)",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "values": {
+        "2:2": 11
+      }
+    },
+    {
+      "id": "VariableID:12:77",
+      "name": "type/size/12",
+      "type": "FLOAT",
+      "css": "var(--nu-text-12)",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "values": {
+        "2:2": 12
+      }
+    },
+    {
+      "id": "VariableID:12:78",
+      "name": "type/size/13",
+      "type": "FLOAT",
+      "css": "var(--nu-text-13)",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "values": {
+        "2:2": 13
+      }
+    },
+    {
+      "id": "VariableID:12:79",
+      "name": "type/size/14",
+      "type": "FLOAT",
+      "css": "var(--nu-text-14)",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "values": {
+        "2:2": 14
+      }
+    },
+    {
+      "id": "VariableID:12:80",
+      "name": "type/size/16",
+      "type": "FLOAT",
+      "css": "var(--nu-text-16)",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "values": {
+        "2:2": 16
+      }
+    },
+    {
+      "id": "VariableID:12:81",
+      "name": "type/size/18",
+      "type": "FLOAT",
+      "css": "var(--nu-text-18)",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "values": {
+        "2:2": 18
+      }
+    },
+    {
+      "id": "VariableID:12:82",
+      "name": "type/size/22",
+      "type": "FLOAT",
+      "css": "var(--nu-text-22)",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "values": {
+        "2:2": 22
+      }
+    },
+    {
+      "id": "VariableID:12:83",
+      "name": "type/size/24",
+      "type": "FLOAT",
+      "css": "var(--nu-text-24)",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "values": {
+        "2:2": 24
+      }
+    },
+    {
+      "id": "VariableID:12:84",
+      "name": "type/size/28",
+      "type": "FLOAT",
+      "css": "var(--nu-text-28)",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "values": {
+        "2:2": 28
+      }
+    },
+    {
+      "id": "VariableID:12:85",
+      "name": "type/size/32",
+      "type": "FLOAT",
+      "css": "var(--nu-text-32)",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "values": {
+        "2:2": 32
+      }
+    },
+    {
+      "id": "VariableID:12:86",
+      "name": "type/size/36",
+      "type": "FLOAT",
+      "css": "var(--nu-text-36)",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "values": {
+        "2:2": 36
+      }
+    },
+    {
+      "id": "VariableID:12:87",
+      "name": "type/size/48",
+      "type": "FLOAT",
+      "css": "var(--nu-text-48)",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "values": {
+        "2:2": 48
+      }
+    },
+    {
+      "id": "VariableID:12:88",
+      "name": "type/size/64",
+      "type": "FLOAT",
+      "css": "var(--nu-text-64)",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "values": {
+        "2:2": 64
+      }
+    },
+    {
+      "id": "VariableID:12:89",
+      "name": "type/size/72",
+      "type": "FLOAT",
+      "css": "var(--nu-text-72)",
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "values": {
+        "2:2": 72
+      }
+    }
+  ],
+  "textStyles": [
+    {
+      "id": "S:62aa0920321b77812bd2b064d28212a6edf001a6,",
+      "name": "NU / Display",
+      "font": {
+        "family": "Space Grotesk",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "fontSize": 72,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 74
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -3
+      }
+    },
+    {
+      "id": "S:8fc9635994877e7d6a20f4f18bdbb38727f3668b,",
+      "name": "NU / Heading 1",
+      "font": {
+        "family": "Space Grotesk",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "fontSize": 48,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 52
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -1.5
+      }
+    },
+    {
+      "id": "S:be91a91a9fba885fc5ea89c3c5a7021fc9f02c2f,",
+      "name": "NU / Heading 2",
+      "font": {
+        "family": "Space Grotesk",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "fontSize": 32,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 36
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.800000011920929
+      }
+    },
+    {
+      "id": "S:d4f34491e97877cd308a2e3cf2e8c896fbfb0fc1,",
+      "name": "NU / Heading 3",
+      "font": {
+        "family": "Space Grotesk",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "fontSize": 22,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 26
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.6600000262260437
+      }
+    },
+    {
+      "id": "S:952aa905c19ce58920f795a3426ad01a86a40990,",
+      "name": "NU / Body",
+      "font": {
+        "family": "Space Grotesk",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:9ad74da887fe2b651dc3d1ae5f876ad9244c2e33,",
+      "name": "NU / Body small",
+      "font": {
+        "family": "Space Grotesk",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:b76ea8484c5ba967bb96144f58f4488f54be1729,",
+      "name": "NU / Label",
+      "font": {
+        "family": "Space Grotesk",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "fontSize": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0.5600000023841858
+      }
+    },
+    {
+      "id": "S:2ae8e69b07ebf8963cc376e6e3631137a9bbbb51,",
+      "name": "NU / Source button",
+      "font": {
+        "family": "Space Grotesk",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "fontSize": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 17
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0.47999998927116394
+      }
+    },
+    {
+      "id": "S:5c666aa7d9b17c5d52d3419daa7b63aac7555f12,",
+      "name": "NU / Source body",
+      "font": {
+        "family": "Space Grotesk",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "fontSize": 13,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 18
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:9fa9d9dc8e810d684a20aed0b7fbc11ac65c0f3d,",
+      "name": "NU / Mono",
+      "font": {
+        "family": "DM Mono",
+        "style": "Regular"
+      },
+      "fontSize": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 18
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      }
+    },
+    {
+      "id": "S:d8a3f305dbeaa535b9d76d8f7782fb7b5b6960e0,",
+      "name": "NU / Micro",
+      "font": {
+        "family": "DM Mono",
+        "style": "Medium"
+      },
+      "fontSize": 11,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0.6000000238418579
+      }
+    },
+    {
+      "id": "S:d35f258094734a5f128235b04c88f3d862fd006f,",
+      "name": "NU / Price",
+      "font": {
+        "family": "DM Mono",
+        "style": "Medium"
+      },
+      "fontSize": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 28
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.5
+      }
+    }
+  ],
+  "effectStyles": [
+    {
+      "id": "S:71d89d15d9e8b72e7325572a106261c7ac8f806c,",
+      "name": "NU / Hard shadow / Pressed",
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "visible": true,
+          "radius": 0,
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:2:37"
+            },
+            "offsetX": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:2:61"
+            },
+            "offsetY": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:2:61"
+            }
+          },
+          "color": {
+            "r": 0.10196078568696976,
+            "g": 0.08235294371843338,
+            "b": 0.062745101749897,
+            "a": 1
+          },
+          "offset": {
+            "x": 1,
+            "y": 1
+          },
+          "spread": 0,
+          "blendMode": "NORMAL",
+          "showShadowBehindNode": true
+        }
+      ]
+    },
+    {
+      "id": "S:77493bc9a47030071b8b15b73d9e22fe57c7e30e,",
+      "name": "NU / Hard shadow / Small",
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "visible": true,
+          "radius": 0,
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:2:37"
+            },
+            "offsetX": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:2:62"
+            },
+            "offsetY": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:2:62"
+            }
+          },
+          "color": {
+            "r": 0.10196078568696976,
+            "g": 0.08235294371843338,
+            "b": 0.062745101749897,
+            "a": 1
+          },
+          "offset": {
+            "x": 3,
+            "y": 3
+          },
+          "spread": 0,
+          "blendMode": "NORMAL",
+          "showShadowBehindNode": true
+        }
+      ]
+    },
+    {
+      "id": "S:118534205d051a1c9ac55c211056d100d47528e7,",
+      "name": "NU / Hard shadow / Hover",
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "visible": true,
+          "radius": 0,
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:2:37"
+            },
+            "offsetX": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:2:63"
+            },
+            "offsetY": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:2:63"
+            }
+          },
+          "color": {
+            "r": 0.10196078568696976,
+            "g": 0.08235294371843338,
+            "b": 0.062745101749897,
+            "a": 1
+          },
+          "offset": {
+            "x": 4,
+            "y": 4
+          },
+          "spread": 0,
+          "blendMode": "NORMAL",
+          "showShadowBehindNode": true
+        }
+      ]
+    },
+    {
+      "id": "S:24fd7e18746e09e82135f60b4dc6bd6324de9df2,",
+      "name": "NU / Hard shadow / Default",
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "visible": true,
+          "radius": 0,
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:2:37"
+            },
+            "offsetX": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:2:64"
+            },
+            "offsetY": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:2:64"
+            }
+          },
+          "color": {
+            "r": 0.10196078568696976,
+            "g": 0.08235294371843338,
+            "b": 0.062745101749897,
+            "a": 1
+          },
+          "offset": {
+            "x": 5,
+            "y": 5
+          },
+          "spread": 0,
+          "blendMode": "NORMAL",
+          "showShadowBehindNode": true
+        }
+      ]
+    },
+    {
+      "id": "S:3afce7f24c039acb1a8fc40693d9f0f5705681a4,",
+      "name": "NU / Hard shadow / Large",
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "visible": true,
+          "radius": 0,
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:2:37"
+            },
+            "offsetX": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:2:65"
+            },
+            "offsetY": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:2:65"
+            }
+          },
+          "color": {
+            "r": 0.10196078568696976,
+            "g": 0.08235294371843338,
+            "b": 0.062745101749897,
+            "a": 1
+          },
+          "offset": {
+            "x": 7,
+            "y": 7
+          },
+          "spread": 0,
+          "blendMode": "NORMAL",
+          "showShadowBehindNode": true
+        }
+      ]
+    }
+  ],
+  "cssOnly": {
+    "Disclosure": {
+      "selector": ".nu-disclosure",
+      "element": "details",
+      "note": "Native code pattern; no corresponding Figma master in v1."
+    }
+  }
+}
