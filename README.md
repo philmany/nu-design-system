@@ -84,6 +84,24 @@ Use Figma for composition and visual decisions. Use this package for implementat
 
 The Figma file has nine pages: Start, Foundations, Icons, Buttons, Forms, App patterns, Commerce, Flow recipes, and Handoff. It contains local reusable components. To reuse them across Figma files, publish the library in Figma and enable it in the destination file, or copy the component masters with their variables. The library was created as a design file; publishing is a separate action. `figma-map.json` provides a portable lookup. It is not a published native Code Connect integration.
 
+## Accessibility notes
+
+Measured contrast for the default palette (WCAG AA needs 4.5:1 for text under 24px):
+
+| Pairing | Ratio | Use |
+| --- | --- | --- |
+| Ink on paper | 16.9 | Everything |
+| Muted on paper | 5.05 | Secondary text |
+| Muted on cream | 4.55 | Secondary text, just passing |
+| Muted on yellow | 3.30 | **Do not use**; use ink on accent fills |
+| Ink on amber / honey | 5.52 / 8.25 | Fills with ink text |
+| Amber on paper | 3.06 | **Fill only**, never text |
+| White on green | 3.81 | **Fill only**; use `--nu-success` for text-bearing surfaces |
+
+**Dot grid.** `.nu-dot-grid` paints 1px specks every 22px. Ink text is unaffected, but small muted text (11–12px mono) collides with the specks. Put it on a surface (card, alert), or add `.nu-plate` to paint a paper-colored plate behind it. The dots use `--nu-dot` (`--dots-soft`), which is lighter than the original `--dots` so muted text keeps about 3:1 against a speck. Dots are decorative and carry no information.
+
+**Theming shadows.** Shadows follow `--nu-border`. Set it on the same element as `.nu-root` (`<main class="nu-root my-store">`) and borders and shadows change together.
+
 ## Before shipping
 
 Give controls real behavior, validate server-side, and connect inventory/payment/order state to your backend. The catalog’s interactions are demonstrations. Native buttons, labels, radios, checkboxes, dialog, and progress elements are intentional: preserve their semantics when adapting to a framework. Verify keyboard use, focus order, zoom, small screens, and your actual text/colors in the finished app.

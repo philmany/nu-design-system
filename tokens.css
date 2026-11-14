@@ -12,6 +12,7 @@
   --success-dark: #365423;
   --muted-ink: #756858;
   --dots: #b8a898;
+  --dots-soft: #cfc3b2;
   --hover-ink: #222222;
   --nu-bg: var(--white);
   --nu-surface: var(--white);
@@ -24,8 +25,10 @@
   --nu-border: var(--black);
   --nu-on-strong: var(--yellow);
   --nu-strong: var(--black);
+  --nu-strong-hover: var(--hover-ink);
   --nu-disabled-bg: var(--cream);
   --nu-subtle: var(--cream);
+  --nu-dot: var(--dots-soft);
   --nu-warning: var(--amber);
   --nu-rose: var(--pink);
   --nu-on-danger: var(--white);
@@ -82,14 +85,16 @@
   --nu-text-48: 48px;
   --nu-text-64: 64px;
   --nu-text-72: 72px;
-  --nu-shadow-pressed: var(--nu-shadow-offset-1) var(--nu-shadow-offset-1) 0px 0px var(--black);
-  --nu-shadow-small: var(--nu-shadow-offset-3) var(--nu-shadow-offset-3) 0px 0px var(--black);
-  --nu-shadow-hover: var(--nu-shadow-offset-4) var(--nu-shadow-offset-4) 0px 0px var(--black);
-  --nu-shadow-default: var(--nu-shadow-offset-5) var(--nu-shadow-offset-5) 0px 0px var(--black);
-  --nu-shadow-large: var(--nu-shadow-offset-7) var(--nu-shadow-offset-7) 0px 0px var(--black);
   --nu-shadow-offset-1: 1px;
   --nu-shadow-offset-3: 3px;
   --nu-shadow-offset-4: 4px;
   --nu-shadow-offset-5: 5px;
   --nu-shadow-offset-7: 7px;
+}
+:root, .nu-root {
+  --nu-shadow-pressed: var(--nu-shadow-offset-1) var(--nu-shadow-offset-1) 0px 0px var(--nu-border);
+  --nu-shadow-small: var(--nu-shadow-offset-3) var(--nu-shadow-offset-3) 0px 0px var(--nu-border);
+  --nu-shadow-hover: var(--nu-shadow-offset-4) var(--nu-shadow-offset-4) 0px 0px var(--nu-border);
+  --nu-shadow-default: var(--nu-shadow-offset-5) var(--nu-shadow-offset-5) 0px 0px var(--nu-border);
+  --nu-shadow-large: var(--nu-shadow-offset-7) var(--nu-shadow-offset-7) 0px 0px var(--nu-border);
 }

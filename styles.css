@@ -15,7 +15,9 @@
   .nu-title { font: 700 var(--nu-text-28)/1.05 var(--nu-font); letter-spacing: -.035em; }
   .nu-mono { font-family: var(--nu-mono); }
   .nu-muted { color: var(--nu-muted); }
-  .nu-dot-grid { background-image: radial-gradient(var(--dots) .9px, transparent .9px); background-size: 22px 22px; }
+  .nu-dot-grid { background-image: radial-gradient(var(--nu-dot) .9px, transparent .9px); background-size: 22px 22px; }
+  /* Muted or small text directly on .nu-dot-grid collides with the specks. Put it on a surface, or add .nu-plate to paint a paper-colored plate behind the text. Ink text needs neither. */
+  .nu-plate { width: fit-content; max-width: 100%; background: var(--nu-bg); box-shadow: 0 0 0 var(--nu-space-4) var(--nu-bg); }
   .nu-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
   a.nu-sr-only:focus { position: fixed; top: 12px; left: 12px; z-index: 1000; width: auto; height: auto; margin: 0; padding: 12px 16px; clip-path: none; white-space: normal; border: var(--nu-border-width) solid var(--nu-ink); background: var(--nu-accent); }
   .nu-icon { width: var(--nu-size-icon); height: var(--nu-size-icon); flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
@@ -29,7 +31,7 @@
   .nu-button:hover:not(:disabled):not([aria-disabled="true"]) { transform: translate(-1px, -1px); box-shadow: var(--nu-shadow-hover); background: var(--nu-subtle); }
   .nu-button:active:not(:disabled):not([aria-disabled="true"]), .nu-button[data-state="pressed"] { transform: translate(2px, 2px); box-shadow: var(--nu-shadow-pressed); }
   .nu-button--primary { background: var(--nu-strong); color: var(--nu-on-strong); }
-  .nu-button--primary:hover:not(:disabled):not([aria-disabled="true"]) { background: var(--hover-ink); }
+  .nu-button--primary:hover:not(:disabled):not([aria-disabled="true"]) { background: var(--nu-strong-hover); }
   .nu-button--accent { background: var(--nu-honey); }
   .nu-button--accent:hover:not(:disabled):not([aria-disabled="true"]) { background: var(--nu-accent); }
   .nu-button--danger { background: var(--nu-danger); color: var(--nu-on-danger); }
@@ -52,6 +54,8 @@
   .nu-input:focus, .nu-select:focus, .nu-textarea:focus { background: var(--nu-accent); box-shadow: var(--nu-shadow-small); }
   .nu-textarea { min-height: 112px; resize: vertical; }
   .nu-input::placeholder, .nu-textarea::placeholder { color: var(--nu-muted); opacity: 1; }
+  /* Muted on the yellow focus fill is only 3.30:1; switch to ink while focused. */
+  .nu-input:focus::placeholder, .nu-textarea:focus::placeholder { color: var(--nu-ink); opacity: .75; }
   .nu-input[aria-invalid="true"], .nu-select[aria-invalid="true"], .nu-textarea[aria-invalid="true"] { border-color: var(--nu-danger); }
   .nu-input:disabled, .nu-select:disabled, .nu-textarea:disabled { color: var(--nu-muted); background: var(--nu-disabled-bg); cursor: not-allowed; }
   .nu-help { margin: 0; color: var(--nu-muted); font: 400 var(--nu-text-12)/1.5 var(--nu-mono); }
