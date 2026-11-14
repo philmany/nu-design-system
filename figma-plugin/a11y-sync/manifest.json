@@ -1,0 +1,9 @@
+{
+  "name": "NU a11y sync (v1.1)",
+  "id": "nu-a11y-sync-local",
+  "api": "1.0.0",
+  "main": "code.js",
+  "editorType": ["figma"],
+  "documentAccess": "dynamic-page",
+  "networkAccess": { "allowedDomains": ["none"] }
+}
