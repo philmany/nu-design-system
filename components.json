@@ -93,6 +93,11 @@
       "origin": "source-derived"
     },
     {
+      "name": "Toolbar",
+      "selector": ".nu-toolbar",
+      "origin": "extension"
+    },
+    {
       "name": "Disclosure",
       "selector": ".nu-disclosure",
       "origin": "extension"

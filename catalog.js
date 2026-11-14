@@ -48,6 +48,32 @@ document.querySelectorAll('[role="tablist"]').forEach(list => {
   });
 });
 
+// Toolbar: one Tab stop, arrow keys move between items (WAI-ARIA APG toolbar pattern).
+document.querySelectorAll('[role="toolbar"][data-roving]').forEach(bar => {
+  const items = [...bar.querySelectorAll("button:not(:disabled)")];
+  items.forEach((item, i) => { item.tabIndex = i === 0 ? 0 : -1; });
+  bar.addEventListener("keydown", event => {
+    const index = items.indexOf(document.activeElement);
+    if (index < 0) return;
+    let next;
+    if (event.key === "ArrowRight") next = (index + 1) % items.length;
+    if (event.key === "ArrowLeft") next = (index - 1 + items.length) % items.length;
+    if (event.key === "Home") next = 0;
+    if (event.key === "End") next = items.length - 1;
+    if (next === undefined) return;
+    event.preventDefault();
+    items[index].tabIndex = -1;
+    items[next].tabIndex = 0;
+    items[next].focus();
+  });
+  bar.querySelectorAll("[data-toggle-group]").forEach(button => {
+    button.addEventListener("click", () => {
+      bar.querySelectorAll(`[data-toggle-group="${button.dataset.toggleGroup}"]`).forEach(other => other.setAttribute("aria-pressed", String(other === button)));
+      announce(`${button.textContent.trim()} view selected.`);
+    });
+  });
+});
+
 document.querySelectorAll("[data-quantity]").forEach(control => {
   const input = control.querySelector("input");
   const decrease = control.querySelector("[data-decrease]");

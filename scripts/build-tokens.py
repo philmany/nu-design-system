@@ -4,6 +4,8 @@
 Usage: python scripts/build-tokens.py [--check]
   --check  exit 1 if tokens.css is out of date instead of writing it.
 Token references like {color.primitive.black} become var(--black).
+Type sizes (type.size.*) are authored in px and emitted as rem on a 16px base,
+so text honours the user's browser font-size preference (WCAG 1.4.4).
 """
 import json, sys
 from pathlib import Path
@@ -33,10 +35,15 @@ def main():
             return f"var({css_name(tokens[value[1:-1]])})"
         return fmt(value)
 
-    def render(token):
+    def rem(v):
+        if v["unit"] != "px":
+            return dim(v)
+        return f'{v["value"] / 16:g}rem'
+
+    def render(path, token):
         kind, value = token["$type"], token["$value"]
         if kind == "dimension":
-            return ref_or(value, dim)
+            return ref_or(value, rem if path.startswith("type.size.") else dim)
         if kind == "fontFamily":
             fallback = "ui-monospace, monospace" if "Mono" in value else "system-ui, sans-serif"
             return f'"{value}", {fallback}'
@@ -50,13 +57,13 @@ def main():
     # Shadows are re-declared on .nu-root as well as :root. A var() inside a custom
     # property is resolved where it is declared, so without this a theme that sets
     # --nu-border on <main class="nu-root my-store"> would not reach the shadows.
-    base = [t for t in tokens.values() if t["$type"] != "shadow"]
-    shadows = [t for t in tokens.values() if t["$type"] == "shadow"]
+    base = [(p, t) for p, t in tokens.items() if t["$type"] != "shadow"]
+    shadows = [(p, t) for p, t in tokens.items() if t["$type"] == "shadow"]
     lines = [HEADER, ":root {\n"]
-    lines += [f"  {css_name(t)}: {render(t)};\n" for t in base]
+    lines += [f"  {css_name(t)}: {render(p, t)};\n" for p, t in base]
     lines.append("}\n")
     lines.append(":root, .nu-root {\n")
-    lines += [f"  {css_name(t)}: {render(t)};\n" for t in shadows]
+    lines += [f"  {css_name(t)}: {render(p, t)};\n" for p, t in shadows]
     lines.append("}\n")
     out = "".join(lines)
 

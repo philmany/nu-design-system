@@ -6,28 +6,33 @@
 
 @layer nu-base {
   :where([class^="nu-"], [class*=" nu-"]) { box-sizing: border-box; }
-  .nu-root { color: var(--nu-ink); background: var(--nu-bg); font-family: var(--nu-font); font-size: var(--nu-text-14); line-height: 1.5; }
+  .nu-root { color: var(--nu-ink); background: var(--nu-bg); font-family: var(--nu-font); font-size: var(--nu-type-body); line-height: 1.5; }
   .nu-stack { display: flex; flex-direction: column; gap: var(--nu-space-16); }
   .nu-row { display: flex; align-items: center; flex-wrap: wrap; gap: var(--nu-space-12); }
   .nu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: var(--nu-space-24); }
-  .nu-kicker { font: 500 var(--nu-text-12)/1.5 var(--nu-mono); letter-spacing: .08em; text-transform: uppercase; }
-  .nu-display { font: 700 clamp(36px, 7vw, 64px)/.98 var(--nu-font); letter-spacing: -.05em; text-transform: uppercase; }
+  .nu-kicker { font: 500 var(--nu-type-min)/1.5 var(--nu-mono); letter-spacing: .08em; text-transform: uppercase; }
+  .nu-display { font: 700 clamp(2.25rem, 7vw, 4rem)/.98 var(--nu-font); letter-spacing: -.05em; text-transform: uppercase; }
   .nu-title { font: 700 var(--nu-text-28)/1.05 var(--nu-font); letter-spacing: -.035em; }
+  /* Long-form copy: anything longer than ~3 lines. */
+  .nu-prose { font-size: var(--nu-type-prose); line-height: 1.6; max-width: 70ch; }
   .nu-mono { font-family: var(--nu-mono); }
   .nu-muted { color: var(--nu-muted); }
+  /* Warm fills: muted gray drops to 1.65–3.30:1 and danger red to 2.7–3.6:1. Inside these surfaces both resolve to ink. */
+  :where(.nu-card--accent, .nu-message--user, .nu-message--assistant, .nu-alert--warning, .nu-badge, .nu-order-steps [aria-current="step"]) { --nu-muted: var(--nu-ink); --nu-danger-text: var(--nu-ink); }
   .nu-dot-grid { background-image: radial-gradient(var(--nu-dot) .9px, transparent .9px); background-size: 22px 22px; }
   /* Muted or small text directly on .nu-dot-grid collides with the specks. Put it on a surface, or add .nu-plate to paint a paper-colored plate behind the text. Ink text needs neither. */
   .nu-plate { width: fit-content; max-width: 100%; background: var(--nu-bg); box-shadow: 0 0 0 var(--nu-space-4) var(--nu-bg); }
   .nu-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
   a.nu-sr-only:focus { position: fixed; top: 12px; left: 12px; z-index: 1000; width: auto; height: auto; margin: 0; padding: 12px 16px; clip-path: none; white-space: normal; border: var(--nu-border-width) solid var(--nu-ink); background: var(--nu-accent); }
-  .nu-icon { width: var(--nu-size-icon); height: var(--nu-size-icon); flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .nu-icon { width: max(var(--nu-size-icon), 1.25em); height: max(var(--nu-size-icon), 1.25em); flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
   :where(.nu-button, .nu-tab, .nu-choice, .nu-link, .nu-input, .nu-select, .nu-textarea, .nu-check, .nu-radio, .nu-toggle, .nu-disclosure summary):focus-visible { outline: var(--nu-border-width) solid var(--nu-ink); outline-offset: 4px; }
   .nu-link { color: inherit; text-underline-offset: .18em; text-decoration-thickness: 2px; }
 }
 
 @layer nu-components {
-  /* Actions: one strong action per group; compact controls need a 44px wrapper. */
-  .nu-button { display: inline-flex; align-items: center; justify-content: center; gap: var(--nu-space-8); min-height: var(--nu-size-control); padding: var(--nu-space-8) var(--nu-space-16); border: var(--nu-border-width) solid var(--nu-border); border-radius: var(--nu-radius); box-shadow: var(--nu-shadow-small); background: var(--nu-surface); color: var(--nu-ink); font: 700 var(--nu-text-12)/1.2 var(--nu-font); letter-spacing: .04em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: transform .1s, box-shadow .1s, background .1s; }
+  /* Actions: one strong action per group. Labels never drop below --nu-type-control (14px), except compact (12px). */
+  /* Compact is for low-frequency secondary actions inside dense rows only: never in toolbars, nav, or for primary actions. Its 32px target needs 44px of clear space or a 44px wrapper. */
+  .nu-button { display: inline-flex; align-items: center; justify-content: center; gap: var(--nu-space-8); min-height: var(--nu-size-control); padding: var(--nu-space-8) var(--nu-space-16); border: var(--nu-border-width) solid var(--nu-border); border-radius: var(--nu-radius); box-shadow: var(--nu-shadow-small); background: var(--nu-surface); color: var(--nu-ink); font: 700 var(--nu-type-control)/1.2 var(--nu-font); letter-spacing: .04em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: transform .1s, box-shadow .1s, background .1s; }
   .nu-button:hover:not(:disabled):not([aria-disabled="true"]) { transform: translate(-1px, -1px); box-shadow: var(--nu-shadow-hover); background: var(--nu-subtle); }
   .nu-button:active:not(:disabled):not([aria-disabled="true"]), .nu-button[data-state="pressed"] { transform: translate(2px, 2px); box-shadow: var(--nu-shadow-pressed); }
   .nu-button--primary { background: var(--nu-strong); color: var(--nu-on-strong); }
@@ -38,8 +43,8 @@
   .nu-button--danger:hover:not(:disabled):not([aria-disabled="true"]) { background: var(--nu-danger); }
   .nu-button--quiet { border-color: transparent; box-shadow: none; background: transparent; text-decoration: underline; text-underline-offset: .2em; }
   .nu-button--quiet:hover:not(:disabled):not([aria-disabled="true"]) { box-shadow: none; transform: none; background: var(--nu-subtle); }
-  .nu-button--compact { min-height: var(--nu-size-control-compact); padding: var(--nu-space-5) var(--nu-space-10); font-size: var(--nu-text-11); }
-  .nu-button--large { min-height: var(--nu-size-control-large); padding-inline: var(--nu-space-24); font-size: var(--nu-text-14); }
+  .nu-button--compact { min-height: var(--nu-size-control-compact); padding: var(--nu-space-5) var(--nu-space-10); font-size: var(--nu-type-min); letter-spacing: .02em; }
+  .nu-button--large { min-height: var(--nu-size-control-large); padding-inline: var(--nu-space-24); font-size: var(--nu-text-16); }
   .nu-button--icon { width: var(--nu-size-control); padding: var(--nu-space-8); }
   .nu-button--block { width: 100%; }
   .nu-button:disabled, .nu-button[aria-disabled="true"] { background: var(--nu-disabled-bg); color: var(--nu-muted); box-shadow: none; cursor: not-allowed; transform: none; }
@@ -49,8 +54,8 @@
 
   /* Fields always have visible labels; helpers and errors use aria-describedby. */
   .nu-field { display: flex; flex-direction: column; gap: var(--nu-space-6); min-width: 0; }
-  .nu-label { color: var(--nu-ink); font: 500 var(--nu-text-12)/1.4 var(--nu-mono); letter-spacing: .06em; text-transform: uppercase; }
-  .nu-input, .nu-select, .nu-textarea { box-sizing: border-box; width: 100%; min-height: var(--nu-size-control); padding: var(--nu-space-10) var(--nu-space-12); border: var(--nu-border-width) solid var(--nu-border); border-radius: var(--nu-radius); background: var(--nu-surface); color: var(--nu-ink); font: 500 var(--nu-text-16)/1.35 var(--nu-font); }
+  .nu-label { color: var(--nu-ink); font: 500 var(--nu-type-support)/1.4 var(--nu-mono); letter-spacing: .06em; text-transform: uppercase; }
+  .nu-input, .nu-select, .nu-textarea { box-sizing: border-box; width: 100%; min-height: var(--nu-size-control); padding: var(--nu-space-10) var(--nu-space-12); border: var(--nu-border-width) solid var(--nu-border); border-radius: var(--nu-radius); background: var(--nu-surface); color: var(--nu-ink); font: 500 var(--nu-type-input)/1.35 var(--nu-font); }
   .nu-input:focus, .nu-select:focus, .nu-textarea:focus { background: var(--nu-accent); box-shadow: var(--nu-shadow-small); }
   .nu-textarea { min-height: 112px; resize: vertical; }
   .nu-input::placeholder, .nu-textarea::placeholder { color: var(--nu-muted); opacity: 1; }
@@ -58,8 +63,8 @@
   .nu-input:focus::placeholder, .nu-textarea:focus::placeholder { color: var(--nu-ink); opacity: .75; }
   .nu-input[aria-invalid="true"], .nu-select[aria-invalid="true"], .nu-textarea[aria-invalid="true"] { border-color: var(--nu-danger); }
   .nu-input:disabled, .nu-select:disabled, .nu-textarea:disabled { color: var(--nu-muted); background: var(--nu-disabled-bg); cursor: not-allowed; }
-  .nu-help { margin: 0; color: var(--nu-muted); font: 400 var(--nu-text-12)/1.5 var(--nu-mono); }
-  .nu-error { margin: 0; color: var(--nu-danger); font: 500 var(--nu-text-12)/1.5 var(--nu-mono); }
+  .nu-help { margin: 0; color: var(--nu-muted); font: 400 var(--nu-type-support)/1.5 var(--nu-mono); }
+  .nu-error { margin: 0; color: var(--nu-danger-text); font: 500 var(--nu-type-support)/1.5 var(--nu-mono); }
   .nu-control-label { display: inline-flex; align-items: center; gap: var(--nu-space-10); min-height: var(--nu-size-control); cursor: pointer; }
   .nu-check, .nu-radio { appearance: none; box-sizing: border-box; margin: 0; width: 22px; height: 22px; border: var(--nu-border-width) solid var(--nu-border); background: var(--nu-surface); flex: 0 0 auto; cursor: pointer; }
   .nu-check:checked { background: var(--nu-strong); box-shadow: inset 0 0 0 3px var(--nu-accent); }
@@ -76,27 +81,31 @@
   .nu-fieldset { padding: 0; border: 0; margin: 0; min-width: 0; }
   .nu-fieldset > legend { margin-bottom: var(--nu-space-8); }
   .nu-options { display: flex; gap: var(--nu-space-8); flex-wrap: wrap; }
-  .nu-choice { position: relative; display: inline-flex; align-items: center; justify-content: center; min-width: var(--nu-size-control); min-height: var(--nu-size-control); padding: var(--nu-space-8) var(--nu-space-12); border: var(--nu-border-width) solid var(--nu-border); background: var(--nu-surface); color: var(--nu-ink); font: 500 var(--nu-text-14)/1.2 var(--nu-mono); cursor: pointer; }
+  .nu-choice { position: relative; display: inline-flex; align-items: center; justify-content: center; min-width: var(--nu-size-control); min-height: var(--nu-size-control); padding: var(--nu-space-8) var(--nu-space-12); border: var(--nu-border-width) solid var(--nu-border); background: var(--nu-surface); color: var(--nu-ink); font: 500 var(--nu-type-control)/1.2 var(--nu-mono); cursor: pointer; }
   .nu-choice:has(input:checked), .nu-choice[aria-pressed="true"] { background: var(--nu-strong); color: var(--nu-on-strong); }
   .nu-choice:has(input:focus-visible) { outline: var(--nu-border-width) solid var(--nu-ink); outline-offset: 4px; }
   .nu-choice:has(input:disabled), .nu-choice:disabled { color: var(--nu-muted); background: var(--nu-subtle); text-decoration: line-through; cursor: not-allowed; }
 
   /* Navigation and feedback. Tabs are for in-place panels; links change pages. */
-  .nu-tabs { display: inline-flex; max-width: 100%; border: var(--nu-border-width) solid var(--nu-border); box-shadow: var(--nu-shadow-default); background: var(--nu-surface); }
-  .nu-tab { display: inline-flex; align-items: center; justify-content: center; min-height: var(--nu-size-control); border: 0; border-right: var(--nu-border-width) solid var(--nu-border); padding: var(--nu-space-8) var(--nu-space-16); background: var(--nu-surface); color: var(--nu-ink); font: 700 var(--nu-text-12)/1.3 var(--nu-font); letter-spacing: .04em; text-transform: uppercase; cursor: pointer; text-decoration: none; }
+  /* Tabs scroll sideways on narrow screens rather than shrinking their labels. */
+  .nu-tabs { display: inline-flex; max-width: 100%; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; border: var(--nu-border-width) solid var(--nu-border); box-shadow: var(--nu-shadow-default); background: var(--nu-surface); }
+  .nu-tab { flex: 0 0 auto; white-space: nowrap; display: inline-flex; align-items: center; justify-content: center; min-height: var(--nu-size-control); border: 0; border-right: var(--nu-border-width) solid var(--nu-border); padding: var(--nu-space-8) var(--nu-space-16); background: var(--nu-surface); color: var(--nu-ink); font: 700 var(--nu-type-control)/1.3 var(--nu-font); letter-spacing: .04em; text-transform: uppercase; cursor: pointer; text-decoration: none; }
   .nu-tab:last-child { border-right: 0; }
+  /* The tab list scrolls, so an outside focus ring would be clipped. Draw it inside; switch to yellow on the ink fill. */
+  .nu-tab:focus-visible { outline-offset: -7px; }
+  .nu-tab:is([aria-selected="true"], [aria-current="page"]):focus-visible { outline-color: var(--nu-on-strong); }
   .nu-tab:hover { background: var(--nu-subtle); }
   .nu-tab[aria-selected="true"], .nu-tab[aria-current="page"] { background: var(--nu-strong); color: var(--nu-on-strong); }
-  .nu-badge { display: inline-flex; align-items: center; gap: var(--nu-space-4); width: fit-content; max-width: 100%; border: var(--nu-border-thin) solid var(--nu-border); padding: var(--nu-space-2) var(--nu-space-7); color: var(--nu-ink); background: var(--nu-honey); font: 500 var(--nu-text-11)/1.4 var(--nu-mono); text-transform: uppercase; letter-spacing: .02em; }
+  .nu-badge { display: inline-flex; align-items: center; gap: var(--nu-space-4); width: fit-content; max-width: 100%; border: var(--nu-border-thin) solid var(--nu-border); padding: var(--nu-space-2) var(--nu-space-7); color: var(--nu-ink); background: var(--nu-honey); font: 500 var(--nu-type-min)/1.4 var(--nu-mono); text-transform: uppercase; letter-spacing: .02em; }
   .nu-badge--new { background: var(--nu-accent); }
-  .nu-badge--sold { background: var(--nu-strong); color: var(--white); }
+  .nu-badge--sold { background: var(--nu-strong); color: var(--nu-bg); }
   .nu-badge--quiet { background: var(--nu-subtle); }
-  .nu-alert { display: flex; align-items: flex-start; gap: var(--nu-space-12); padding: var(--nu-space-12) var(--nu-space-16); border: var(--nu-border-width) solid var(--nu-border); box-shadow: var(--nu-shadow-small); background: var(--nu-subtle); font: 400 var(--nu-text-13)/1.5 var(--nu-mono); }
+  .nu-alert { display: flex; align-items: flex-start; gap: var(--nu-space-12); padding: var(--nu-space-12) var(--nu-space-16); border: var(--nu-border-width) solid var(--nu-border); box-shadow: var(--nu-shadow-small); background: var(--nu-subtle); font: 400 var(--nu-type-body)/1.5 var(--nu-mono); }
   .nu-alert p { margin: 0; }
   .nu-alert--success { background: var(--nu-success); color: var(--nu-on-success); }
   .nu-alert--warning { background: var(--nu-warning); }
   .nu-alert--error { background: var(--nu-danger); color: var(--nu-on-danger); }
-  .nu-message { align-self: flex-start; width: fit-content; max-width: calc(100% - var(--nu-space-24)); padding: var(--nu-space-8) var(--nu-space-12); border: var(--nu-border-width) solid var(--nu-border); border-radius: var(--nu-radius); background: var(--nu-surface); color: var(--nu-ink); font: var(--nu-weight-500) var(--nu-text-13)/1.5 var(--nu-font); overflow-wrap: anywhere; }
+  .nu-message { align-self: flex-start; width: fit-content; max-width: calc(100% - var(--nu-space-24)); padding: var(--nu-space-8) var(--nu-space-12); border: var(--nu-border-width) solid var(--nu-border); border-radius: var(--nu-radius); background: var(--nu-surface); color: var(--nu-ink); font: var(--nu-weight-500) var(--nu-type-body)/1.5 var(--nu-font); overflow-wrap: anywhere; }
   .nu-message p { margin: 0; }
   .nu-message--user { align-self: flex-end; background: var(--nu-accent); font-weight: var(--nu-weight-700); }
   .nu-message--assistant { background: var(--nu-honey); }
@@ -105,12 +114,11 @@
   .nu-card--accent { background: var(--nu-accent); }
   .nu-stat { display: flex; flex-direction: column; gap: var(--nu-space-4); }
   .nu-stat__value { font: 500 var(--nu-text-28)/1.1 var(--nu-mono); letter-spacing: -.04em; }
-  .nu-stat__label { color: var(--nu-muted); font: 500 var(--nu-text-11)/1.4 var(--nu-mono); text-transform: uppercase; letter-spacing: .06em; }
-  .nu-card--accent .nu-stat__label, .nu-card--accent .nu-muted { color: var(--nu-ink); }
-  .nu-progress { display: block; appearance: none; width: 100%; height: 16px; border: var(--nu-border-thin) solid var(--nu-border); border-radius: var(--nu-radius); background: var(--nu-surface); color: var(--nu-honey); }
+  .nu-stat__label { color: var(--nu-muted); font: 500 var(--nu-type-min)/1.4 var(--nu-mono); text-transform: uppercase; letter-spacing: .06em; }
+  .nu-progress { display: block; appearance: none; width: 100%; height: 16px; border: var(--nu-border-thin) solid var(--nu-border); border-radius: var(--nu-radius); background: var(--nu-surface); color: var(--nu-meter); }
   .nu-progress::-webkit-progress-bar { background: var(--nu-surface); }
-  .nu-progress::-webkit-progress-value { background: var(--nu-honey); }
-  .nu-progress::-moz-progress-bar { background: var(--nu-honey); }
+  .nu-progress::-webkit-progress-value { background: var(--nu-meter); }
+  .nu-progress::-moz-progress-bar { background: var(--nu-meter); }
   .nu-divider { height: 0; border: 0; border-top: var(--nu-border-width) solid var(--nu-border); margin: var(--nu-space-16) 0; }
   .nu-disclosure { border-block-end: var(--nu-border-thin) solid var(--nu-border); }
   .nu-disclosure summary { display: flex; justify-content: space-between; align-items: center; min-height: var(--nu-size-control); padding-block: var(--nu-space-12); font-weight: 700; cursor: pointer; list-style: none; }
@@ -124,6 +132,25 @@
   .nu-empty h3 { margin: 0 0 var(--nu-space-8); font: 700 var(--nu-text-22)/1.1 var(--nu-font); }
   .nu-empty p { margin: 0 0 var(--nu-space-20); }
 
+  /* Toolbars are dense, never small. Items keep 44px targets and 14px sentence-case labels.
+     When space runs out: wrap, collapse well-known icons to icon-only (name kept for screen readers), then move the rest into a "More" menu. Never shrink the text. */
+  .nu-toolbar { container-type: inline-size; display: flex; align-items: center; flex-wrap: wrap; gap: var(--nu-space-8); padding: var(--nu-space-6); border: var(--nu-border-width) solid var(--nu-border); background: var(--nu-surface); box-shadow: var(--nu-shadow-small); }
+  .nu-toolbar__group { display: flex; align-items: center; flex-wrap: wrap; gap: var(--nu-space-4); }
+  .nu-toolbar__group + .nu-toolbar__group { padding-inline-start: var(--nu-space-8); border-inline-start: var(--nu-border-thin) solid var(--nu-border); }
+  .nu-toolbar__spacer { flex: 1 1 0; }
+  .nu-toolbar .nu-button { min-height: var(--nu-size-control); padding-inline: var(--nu-space-12); box-shadow: none; font-size: var(--nu-type-control); font-weight: var(--nu-weight-700); letter-spacing: 0; text-transform: none; }
+  .nu-toolbar .nu-button:not(.nu-button--primary, .nu-button--accent, .nu-button--danger) { border-color: transparent; }
+  .nu-toolbar .nu-button:hover:not(:disabled):not([aria-disabled="true"]) { transform: none; box-shadow: none; border-color: var(--nu-border); }
+  .nu-toolbar .nu-button[aria-pressed="true"] { border-color: var(--nu-border); background: var(--nu-strong); color: var(--nu-on-strong); }
+  .nu-toolbar .nu-button[aria-pressed="true"]:hover:not(:disabled) { background: var(--nu-strong-hover); }
+  .nu-toolbar .nu-button--icon { width: var(--nu-size-control); padding: var(--nu-space-8); }
+  @container (max-width: 520px) {
+    .nu-toolbar__collapse { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .nu-toolbar .nu-button:has(.nu-toolbar__collapse) { min-width: var(--nu-size-control); padding-inline: var(--nu-space-8); }
+    .nu-toolbar__spacer { display: none; }
+    .nu-toolbar__group + .nu-toolbar__group { padding-inline-start: 0; border-inline-start: 0; }
+  }
+
   /* Commerce primitives. Sample prices and states; behavior belongs to your app. */
   .nu-product { min-width: 0; border: var(--nu-border-width) solid var(--nu-border); background: var(--nu-surface); box-shadow: var(--nu-shadow-default); }
   .nu-product__media { position: relative; aspect-ratio: 1; overflow: hidden; border-bottom: var(--nu-border-width) solid var(--nu-border); background: var(--nu-subtle); }
@@ -134,9 +161,9 @@
   .nu-product__title a { color: inherit; text-decoration: none; }
   .nu-product__title a:hover { text-decoration: underline; text-underline-offset: .15em; }
   .nu-price { display: inline-flex; align-items: baseline; gap: var(--nu-space-8); font: 500 var(--nu-text-18)/1.3 var(--nu-mono); }
-  .nu-price del { color: var(--nu-muted); font-size: var(--nu-text-13); }
-  .nu-price ins { color: var(--nu-danger); text-decoration: none; }
-  .nu-price__currency { font-size: var(--nu-text-11); }
+  .nu-price del { color: var(--nu-muted); font-size: var(--nu-type-support); }
+  .nu-price ins { color: var(--nu-danger-text); text-decoration: none; }
+  .nu-price__currency { font-size: var(--nu-type-support); }
   .nu-quantity { display: inline-flex; align-items: stretch; border: var(--nu-border-width) solid var(--nu-border); width: fit-content; background: var(--nu-surface); }
   .nu-quantity .nu-button { min-width: var(--nu-size-control); border: 0; box-shadow: none; transform: none; padding: var(--nu-space-8); }
   .nu-quantity .nu-button:hover { transform: none; box-shadow: none; }
@@ -146,21 +173,21 @@
   .nu-cart-item { display: grid; grid-template-columns: 88px 1fr auto; gap: var(--nu-space-16); padding-block: var(--nu-space-16); border-bottom: var(--nu-border-thin) solid var(--nu-border); }
   .nu-cart-item__media { width: 88px; aspect-ratio: 1; object-fit: cover; border: var(--nu-border-thin) solid var(--nu-border); background: var(--nu-subtle); }
   .nu-cart-item__title { margin: 0; font: 700 var(--nu-text-16)/1.2 var(--nu-font); }
-  .nu-cart-item__meta { margin: var(--nu-space-4) 0 var(--nu-space-12); color: var(--nu-muted); font: 400 var(--nu-text-12)/1.5 var(--nu-mono); }
+  .nu-cart-item__meta { margin: var(--nu-space-4) 0 var(--nu-space-12); color: var(--nu-muted); font: 400 var(--nu-type-support)/1.5 var(--nu-mono); }
   .nu-summary { display: flex; flex-direction: column; gap: var(--nu-space-16); }
   .nu-summary dl { display: grid; grid-template-columns: 1fr auto; gap: var(--nu-space-12); margin: 0; }
   .nu-summary dt, .nu-summary dd { margin: 0; }
   .nu-summary dd { text-align: right; font-family: var(--nu-mono); }
   .nu-summary__total { padding-top: var(--nu-space-12); border-top: var(--nu-border-width) solid var(--nu-border); font-weight: 700; }
   .nu-order-steps { display: flex; flex-wrap: wrap; gap: var(--nu-space-8); padding: 0; margin: 0; list-style: none; }
-  .nu-order-steps li { display: inline-flex; align-items: center; gap: var(--nu-space-8); border: var(--nu-border-thin) solid var(--nu-border); padding: var(--nu-space-8) var(--nu-space-12); background: var(--nu-subtle); font: 500 var(--nu-text-12)/1.3 var(--nu-mono); }
+  .nu-order-steps li { display: inline-flex; align-items: center; gap: var(--nu-space-8); border: var(--nu-border-thin) solid var(--nu-border); padding: var(--nu-space-8) var(--nu-space-12); background: var(--nu-subtle); font: 500 var(--nu-type-support)/1.3 var(--nu-mono); }
   .nu-order-steps [aria-current="step"] { background: var(--nu-accent); }
   .nu-order-steps [data-complete="true"] { background: var(--nu-strong); color: var(--nu-on-strong); }
   @media (max-width: 500px) {
     .nu-cart-item { grid-template-columns: 72px 1fr; gap: var(--nu-space-12); }
     .nu-cart-item__media { width: 72px; }
     .nu-cart-item__actions { grid-column: 2; }
-    .nu-tab { padding-inline: var(--nu-space-12); font-size: var(--nu-text-11); }
+    .nu-tab { padding-inline: var(--nu-space-12); }
     .nu-grid { grid-template-columns: 1fr; }
   }
   @media (prefers-reduced-motion: reduce) {
@@ -170,6 +197,18 @@
   @media (forced-colors: active) {
     .nu-check:checked { appearance: auto; }
     .nu-radio:checked { appearance: auto; }
-    .nu-button, .nu-card, .nu-product { box-shadow: none; }
+    .nu-button, .nu-card, .nu-product, .nu-toolbar { box-shadow: none; }
+    /* Selected states are fills; forced colors erase fills, so map them to system highlight colors. */
+    :is(.nu-tab[aria-selected="true"], .nu-tab[aria-current="page"], .nu-choice:has(input:checked), .nu-choice[aria-pressed="true"], .nu-toolbar .nu-button[aria-pressed="true"], .nu-order-steps [aria-current="step"]) { forced-color-adjust: none; background: Highlight; color: HighlightText; border-color: Highlight; }
+    .nu-toggle { forced-color-adjust: none; border-color: CanvasText; background: Canvas; }
+    .nu-toggle::before { background: CanvasText; }
+    .nu-toggle:checked { background: Highlight; }
+    .nu-toggle:checked::before { background: HighlightText; }
+    .nu-toggle:disabled { border-color: GrayText; background: Canvas; }
+    .nu-progress { forced-color-adjust: none; border-color: CanvasText; background: Canvas; }
+    .nu-progress::-webkit-progress-bar { background: Canvas; }
+    .nu-progress::-webkit-progress-value { background: Highlight; }
+    .nu-progress::-moz-progress-bar { background: Highlight; }
+    .nu-toggle:disabled::before { background: GrayText; }
   }
 }

@@ -59,9 +59,9 @@
           <div class="catalog-hero__side">Source: nuNutrition · Made for the next idea · No framework required</div>
         </div>
         <div class="catalog-three catalog-spacer">
-          <article class="nu-card catalog-card"><h3>01. Keep the DNA.</h3><p>Square corners, warm paper, 3px ink, hard shadows. The personality is in the structure.</p></article>
-          <article class="nu-card catalog-card"><h3>02. Make it yours.</h3><p>Swap the accent, content, and product images. Keep the component roles stable.</p></article>
-          <article class="nu-card catalog-card"><h3>03. Ship the boring bits.</h3><p>Labels, focus, loading, stock, errors. Clear beats clever when money moves.</p></article>
+          <article class="nu-card catalog-card"><h2>01. Keep the DNA.</h2><p>Square corners, warm paper, 3px ink, hard shadows. The personality is in the structure.</p></article>
+          <article class="nu-card catalog-card"><h2>02. Make it yours.</h2><p>Swap the accent, content, and product images. Keep the component roles stable.</p></article>
+          <article class="nu-card catalog-card"><h2>03. Ship the boring bits.</h2><p>Labels, focus, loading, stock, errors. Clear beats clever when money moves.</p></article>
         </div>
         <p class="catalog-note">This is a component playground, not a finished store. Product names, prices, and order details are examples.</p>
       </section>
@@ -187,6 +187,24 @@
             <div class="nu-message nu-message--error"><span class="nu-sr-only">Error: </span>Couldn’t load that reply. Try again.</div>
             <p class="nu-help">Sample conversation and error state.</p>
           </div>
+        </div>
+        <div id="toolbar-pattern" class="nu-card nu-stack catalog-spacer">
+          <h3 class="nu-title" style="margin:0">Dense, never small.</h3>
+          <p class="nu-prose" style="margin:0">Toolbars keep 14px sentence-case labels and 44px targets. When space runs out, well-known icons collapse to icon-only (the name stays for screen readers); everything else moves into a “More” menu. Shrinking the text is not an option.</p>
+          <div class="nu-toolbar" role="toolbar" aria-label="Product list actions" data-roving>
+            <div class="nu-toolbar__group">
+              <button class="nu-button" type="button" data-demo-action="Search opened."><svg class="nu-icon" aria-hidden="true"><use href="#icon-search"/></svg><span class="nu-toolbar__collapse">Search</span></button>
+              <button class="nu-button" type="button" data-demo-action="Filters opened."><svg class="nu-icon" aria-hidden="true"><use href="#icon-settings"/></svg><span>Filters</span></button>
+            </div>
+            <div class="nu-toolbar__group" role="group" aria-label="View">
+              <button class="nu-button" type="button" aria-pressed="true" data-toggle-group="view">Grid</button>
+              <button class="nu-button" type="button" aria-pressed="false" data-toggle-group="view">List</button>
+            </div>
+            <span class="nu-toolbar__spacer"></span>
+            <button class="nu-button" type="button" data-demo-action="Archive is a demo."><svg class="nu-icon" aria-hidden="true"><use href="#icon-package"/></svg><span>Archive</span></button>
+            <button class="nu-button nu-button--primary" type="button" data-demo-action="Add product is a demo."><svg class="nu-icon" aria-hidden="true"><use href="#icon-plus"/></svg><span>Add product</span></button>
+          </div>
+          <p class="nu-help">Arrow keys move between items; Tab leaves the toolbar. Search collapses to its icon under 520px.</p>
         </div>
       </section>
 
