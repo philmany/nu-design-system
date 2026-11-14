@@ -36,6 +36,8 @@ In a bundler, import `styles.css` and keep its relative `tokens.css` and `assets
 | `docs/components.md` | Component roles, states, and button copy |
 | `docs/flows.md` | Ecommerce flow recipes and recovery paths |
 | `docs/design-guidelines.md` | Visual and content rules |
+| `docs/accessibility.md` | Type legibility floors, dense-UI/toolbar rules, contrast table, audit log |
+| `scripts/check-a11y.py` | Static contrast + font-size floor checks; run before every release |
 | `figma-map.json` | Figma file and component mapping; intentionally not a live sync |
 | `AI_CONTEXT.md` | Small context file for future coding agents |
 
@@ -86,6 +88,16 @@ The Figma file has nine pages: Start, Foundations, Icons, Buttons, Forms, App pa
 
 ## Accessibility notes
 
+Full rules live in [docs/accessibility.md](docs/accessibility.md). Run the checks after changing tokens or CSS:
+
+```sh
+python scripts/build-tokens.py && python scripts/check-a11y.py
+```
+
+**Type floors.** Nothing below 12px (`--nu-type-min`, metadata only). Text people read before they act (labels, help, errors) is 13px (`--nu-type-support`). Anything clickable, including toolbar items, is 14px (`--nu-type-control`). Long-form copy is 16px (`.nu-prose`). Type tokens are emitted in `rem`, so they follow the user's browser font size.
+
+**Dense UI is never small UI.** Toolbars (`.nu-toolbar`) keep 14px sentence-case labels and 44px targets. When space runs out, they wrap, collapse well-known icons to icon-only, and move the rest into a "More" menu. Never shrink the text. `.nu-button--compact` is not for toolbars or navigation.
+
 Measured contrast for the default palette (WCAG AA needs 4.5:1 for text under 24px):
 
 | Pairing | Ratio | Use |
@@ -97,8 +109,10 @@ Measured contrast for the default palette (WCAG AA needs 4.5:1 for text under 24
 | Ink on amber / honey | 5.52 / 8.25 | Fills with ink text |
 | Amber on paper | 3.06 | **Fill only**, never text |
 | White on green | 3.81 | **Fill only**; use `--nu-success` for text-bearing surfaces |
+| Red on cream | 4.32 | **Do not use for text**; use `--nu-danger-text` (5.51 on paper, 4.97 on cream) |
+| Honey on paper | 2.05 | **Not for meters**; progress uses `--nu-meter` (amber, 3.06) |
 
-**Dot grid.** `.nu-dot-grid` paints 1px specks every 22px. Ink text is unaffected, but small muted text (11–12px mono) collides with the specks. Put it on a surface (card, alert), or add `.nu-plate` to paint a paper-colored plate behind it. The dots use `--nu-dot` (`--dots-soft`), which is lighter than the original `--dots` so muted text keeps about 3:1 against a speck. Dots are decorative and carry no information.
+**Dot grid.** `.nu-dot-grid` paints 1px specks every 22px. Ink text is unaffected, but small muted text (12–13px mono) collides with the specks. Put it on a surface (card, alert), or add `.nu-plate` to paint a paper-colored plate behind it. The dots use `--nu-dot` (`--dots-soft`), which is lighter than the original `--dots` so muted text keeps about 3:1 against a speck. Dots are decorative and carry no information.
 
 **Theming shadows.** Shadows follow `--nu-border`. Set it on the same element as `.nu-root` (`<main class="nu-root my-store">`) and borders and shadows change together.
 

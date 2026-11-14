@@ -1,6 +1,6 @@
 # NU / Brutal Kit — context for future app work
 
-Read `tokens.json`, `docs/components.md`, and `docs/flows.md` first. Use the Figma file for visual composition or exact component structure; do not require Figma MCP for every implementation task.
+Read `tokens.json`, `docs/accessibility.md`, `docs/components.md`, and `docs/flows.md` first. Use the Figma file for visual composition or exact component structure; do not require Figma MCP for every implementation task.
 
 - Source: `philmany/nunutrition`, commit `de8800a6f6bc1619c1c728dfacf3c458ab32c3cb`.
 - Visual DNA: warm paper, ink, yellow/honey/clay; zero corners; 3px border; 3/5/7px hard shadows; Space Grotesk + DM Mono.
@@ -9,6 +9,9 @@ Read `tokens.json`, `docs/components.md`, and `docs/flows.md` first. Use the Fig
 - `styles.css` is product CSS. `catalog.css` and `catalog.js` are demonstrations, not application architecture.
 - Use native semantics: button versus link, visible labels, real radios/checkboxes, dialog, progress. Preserve focus, disabled/loading, error, and unavailable states.
 - Default controls: 44px. Inputs: 16px. Small text on warm accent backgrounds uses ink, not muted gray.
+- Type floors (see `docs/accessibility.md`): nothing under 12px (`--nu-type-min`, metadata only); labels/help/errors 13px (`--nu-type-support`); anything clickable, including toolbar items, 14px (`--nu-type-control`); long-form copy 16px (`.nu-prose`). Use role tokens, not raw `--nu-text-*`.
+- Dense UI (toolbars, tab bars, filter rows) never shrinks text: wrap, collapse well-known icons via `.nu-toolbar__collapse`, then use a "More" menu. Don't use `.nu-button--compact` in toolbars or nav.
+- Run `python scripts/check-a11y.py` after token or CSS changes.
 - Keep purchase language clear. Put personality in headings and empty states. Never invent stock, discounts, shipping promises, or successful payments.
 - Commerce data, payment, tax, inventory, authentication, and persistence are not implemented by this kit. Integrate the app’s real services.
 - Use original Lucide SVGs from `assets/icons/`. Keep upstream notices. Use icon swaps, not a separate component variant for every icon.
