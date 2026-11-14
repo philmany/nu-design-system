@@ -1,0 +1,4 @@
+/* Self-hosted Space Grotesk (variable) and DM Mono. Licensed under SIL OFL 1.1; see ../licenses/. */
+@font-face { font-family: "Space Grotesk"; src: url("./SpaceGrotesk-Variable.ttf") format("truetype"); font-weight: 300 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "DM Mono"; src: url("./DMMono-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "DM Mono"; src: url("./DMMono-Medium.ttf") format("truetype"); font-weight: 500; font-style: normal; font-display: swap; }

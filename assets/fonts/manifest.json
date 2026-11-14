@@ -1,0 +1,19 @@
+{
+  "downloadedFrom": "https://github.com/google/fonts (ofl/spacegrotesk, ofl/dmmono)",
+  "downloaded": "2026-11-13",
+  "license": "SIL OFL 1.1",
+  "files": [
+    {
+      "file": "DMMono-Medium.ttf",
+      "sha256": "fd327daf461db87b44a87def475d251bf03b997f7c07d9680592d75dbbfaad0b"
+    },
+    {
+      "file": "DMMono-Regular.ttf",
+      "sha256": "55b4c98f123daebb3ed27947ba47b2af00554fc6284d639a540bcef5e6258ad2"
+    },
+    {
+      "file": "SpaceGrotesk-Variable.ttf",
+      "sha256": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72"
+    }
+  ]
+}
